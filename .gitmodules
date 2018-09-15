@@ -1,3 +1,3 @@
-[submodule "NktHookLib"]
+[submodule "Extern/Deviare-InProc"]
 	path = Extern/Deviare-InProc
 	url = https://github.com/nektra/Deviare-InProc.git
