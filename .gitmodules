@@ -7,3 +7,6 @@
 [submodule "Extern/asyncplusplus"]
 	path = Extern/asyncplusplus
 	url = https://github.com/Amanieu/asyncplusplus
+[submodule "Extern/boost"]
+	path = Extern/boost
+	url = https://github.com/boostorg/boost.git
