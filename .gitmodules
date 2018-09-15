@@ -1,3 +1,9 @@
 [submodule "Extern/Deviare-InProc"]
 	path = Extern/Deviare-InProc
 	url = https://github.com/nektra/Deviare-InProc
+[submodule "Extern/amy"]
+	path = Extern/amy
+	url = https://github.com/liancheng/amy
+[submodule "Extern/asyncplusplus"]
+	path = Extern/asyncplusplus
+	url = https://github.com/Amanieu/asyncplusplus
