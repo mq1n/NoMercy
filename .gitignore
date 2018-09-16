@@ -75,9 +75,7 @@ Source/Features.txt
 *.ilk
 *.log
 *.tlog
-*.pdb
 *.cer
-*.lib
 *.sbr
 *.sdf
 *.opensdf
