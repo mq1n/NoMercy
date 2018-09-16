@@ -16,18 +16,9 @@
 [submodule "Extern/tinyxml2"]
 	path = Extern/tinyxml2
 	url = https://github.com/leethomason/tinyxml2
-[submodule "Extern/lz4"]
-	path = Extern/lz4
-	url = https://github.com/lz4/lz4
 [submodule "Extern/xxHash"]
 	path = Extern/xxHash
 	url = https://github.com/Cyan4973/xxHash
-[submodule "Extern/rewolf-wow64ext"]
-	path = Extern/rewolf-wow64ext
-	url = https://github.com/mq1n/rewolf-wow64ext
-[submodule "Extern/ReflectiveDLLRefresher"]
-	path = Extern/ReflectiveDLLRefresher
-	url = https://github.com/CylanceVulnResearch/ReflectiveDLLRefresher
 [submodule "Extern/spdlog"]
 	path = Extern/spdlog
 	url = https://github.com/gabime/spdlog
