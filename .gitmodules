@@ -37,3 +37,9 @@
 [submodule "Extern/rtti-obfuscator"]
 	path = Extern/rtti-obfuscator
 	url = https://github.com/koemeet/rtti-obfuscator
+[submodule "Extern/xorstr"]
+	path = Extern/xorstr
+	url = https://github.com/JustasMasiulis/xorstr
+[submodule "Extern/ClanLib"]
+	path = Extern/ClanLib
+	url = https://github.com/sphair/ClanLib
