@@ -51,7 +51,8 @@ Temporary Items
 Tools/
 Backup/
 Doc_priv/
-Extern/CompiledLibs/
+Extern/CompiledLibs
+Source/Bin
 
 #Visual Studio files
 .vs/

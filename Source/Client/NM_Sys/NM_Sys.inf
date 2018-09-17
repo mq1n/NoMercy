@@ -1,5 +1,5 @@
 ;
-; NM_Sys_x86.inf
+; NM_Sys.inf
 ;
 
 [Version]
@@ -8,7 +8,7 @@ Class=System
 ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
 Provider=%ManufacturerName%
 DriverVer=
-CatalogFile=NM_Sys_x86.cat
+CatalogFile=NM_Sys.cat
 
 [DestinationDirs]
 DefaultDestDir = 12
@@ -29,4 +29,4 @@ DefaultDestDir = 12
 [Strings]
 ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
 ClassName=""
-DiskName="NM_Sys_x86 Source Disk"
+DiskName="NM_Sys Source Disk"
