@@ -51,9 +51,10 @@ Temporary Items
 Tools/
 Backup/
 Doc_priv/
-Source/Bak�lcaklar.txt
+Source/Bakilcaklar.txt
 Source/TODO.txt
 Source/Features.txt
+Extern/CompiledLibs/
 
 #Visual Studio files
 .vs/
@@ -97,5 +98,3 @@ Ankh.NoLoad
 *.db
 *.iobj
 *.ipdb
-Extern/boost
-Extern/boost
