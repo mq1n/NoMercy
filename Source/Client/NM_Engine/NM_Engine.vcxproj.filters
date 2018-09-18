@@ -5,19 +5,55 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
+    <Filter Include="Common">
+      <UniqueIdentifier>{dbe57f80-904e-4748-ba9e-14814fff6ad4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Header">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules">
+      <UniqueIdentifier>{1f4e5d98-ff25-4b64-92f4-8eb17dc7681c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\API">
+      <UniqueIdentifier>{ddcb9d0e-2f4a-4966-8574-3e25b002caf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\API\Header">
+      <UniqueIdentifier>{a8e4e904-6409-4240-bb6f-9d415d90235b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NM_Index.h">
-      <Filter>Header Files</Filter>
+      <Filter>Common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="NM_Main.h">
+      <Filter>Common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorCodes.h">
+      <Filter>Common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.h">
+      <Filter>Common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="NM_App.h">
+      <Filter>Common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WinAPI_Typedefs.h">
+      <Filter>Source Files\Anticheat Modules\API\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows_Structs.h">
+      <Filter>Source Files\Anticheat Modules\API\Header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="NM_Main.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="NM_TestFunctions.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="NM_App.cpp">
+      <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
