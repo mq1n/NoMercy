@@ -7,6 +7,7 @@ The "NoMercy" project is "the gold standard" open source Windows kernel/user mod
 * Build 3rd party dependencies or download [released pre-compiled bundle](https://github.com/mq1n/NoMercy/releases/download/v1.0/CompiledLibs.zip) and extract .zip content to "NoMercy\Extern\CompiledLibs"
 
 ### Prerequisites
+* **The project is still under development**
 * [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads/)
 * [Windows Driver Kit](https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk)
 
