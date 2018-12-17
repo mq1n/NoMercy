@@ -18,8 +18,8 @@
 #define MYSQL_UNIX_ADDR            "/tmp/mysql.sock"
 #define MYSQL_CONFIG_NAME          "my"
 #define MYSQL_COMPILATION_COMMENT  "MySQL Connector/C (GPL)"
-#define LIBMYSQL_VERSION           "6.1.10"
-#define LIBMYSQL_VERSION_ID         60110
+#define LIBMYSQL_VERSION           "6.1.11"
+#define LIBMYSQL_VERSION_ID         60111
 
 /* mysqld compile time options */
 #endif /* _CUSTOMCONFIG_ */

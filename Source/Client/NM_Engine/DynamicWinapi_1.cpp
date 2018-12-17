@@ -1,0 +1,89 @@
+#include "NM_Index.h"
+#include "NM_Main.h"
+#include "DynamicWinapi.h"
+
+void CDynamicWinapi::BindAPIs_1()
+{
+	g_winapiApiTable->GetModuleHandleA_o = (lpGetModuleHandleA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetModuleHandleA").crypt_get());
+	g_winapiApiTable->IsDebuggerPresent = (lpIsDebuggerPresent)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("IsDebuggerPresent").crypt_get());
+	g_winapiApiTable->AllocConsole = (lpAllocConsole)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("AllocConsole").crypt_get());
+	g_winapiApiTable->lstrcmpA = (lplstrcmpA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("lstrcmpiA").crypt_get());
+	g_winapiApiTable->GetWindowsDirectoryA = (lpGetWindowsDirectoryA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetWindowsDirectoryA").crypt_get());
+	g_winapiApiTable->Sleep = (lpSleep)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("Sleep").crypt_get());
+	g_winapiApiTable->NtWriteVirtualMemory = (lpNtWriteVirtualMemory)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hNtdll, xorstr("NtWriteVirtualMemory").crypt_get());
+	g_winapiApiTable->WinStationTerminateProcess = (lpWinStationTerminateProcess)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hWinsta, xorstr("WinStationTerminateProcess").crypt_get());
+	g_winapiApiTable->OutputDebugStringA = (lpOutputDebugString)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("OutputDebugStringA").crypt_get());
+	g_winapiApiTable->CreateToolhelp32Snapshot = (lpCreateToolhelp32Snapshot)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("CreateToolhelp32Snapshot").crypt_get());
+	g_winapiApiTable->Process32FirstW = (lpProcess32First)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("Process32FirstW").crypt_get());
+	g_winapiApiTable->Process32NextW = (lpProcess32Next)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("Process32NextW").crypt_get());
+	g_winapiApiTable->Module32FirstW = (lpModule32First)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("Module32FirstW").crypt_get());
+	g_winapiApiTable->Module32NextW = (lpModule32Next)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("Module32NextW").crypt_get());
+	g_winapiApiTable->CharUpperBuffA = (lpCharUpperBuffA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("CharUpperBuffA").crypt_get());
+	g_winapiApiTable->MessageBoxA = (lpMessageBoxA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("MessageBoxA").crypt_get());
+	g_winapiApiTable->NtQueryInformationProcess = (lpNtQueryInformationProcess)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hNtdll, xorstr("NtQueryInformationProcess").crypt_get());
+	g_winapiApiTable->NtQueryInformationThread = (lpNtQueryInformationThread)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hNtdll, xorstr("NtQueryInformationThread").crypt_get());
+	g_winapiApiTable->NtQuerySystemInformation = (lpNtQuerySystemInformation)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hNtdll, xorstr("NtQuerySystemInformation").crypt_get());
+	g_winapiApiTable->ZwSetInformationThread = (lpZwSetInformationThread)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hNtdll, xorstr("ZwSetInformationThread").crypt_get());
+	g_winapiApiTable->CheckRemoteDebuggerPresent = (lpCheckRemoteDebuggerPresent)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("CheckRemoteDebuggerPresent").crypt_get());
+	g_winapiApiTable->ExitThread = (lpExitThread)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("ExitThread").crypt_get());
+	g_winapiApiTable->GetCurrentProcessId = (lpGetCurrentProcessId)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetCurrentProcessId").crypt_get());
+	g_winapiApiTable->VirtualFree = (lpVirtualFree)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("VirtualFree").crypt_get());
+	g_winapiApiTable->VirtualProtect = (lpVirtualProtect)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("VirtualProtect").crypt_get());
+	g_winapiApiTable->CreateFileA = (lpCreateFile)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("CreateFileA").crypt_get());
+	g_winapiApiTable->SetUnhandledExceptionFilter = (lpSetUnhandledExceptionFilter)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("SetUnhandledExceptionFilter").crypt_get());
+	g_winapiApiTable->CreateThread = (lpCreateThread)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("CreateThread").crypt_get());
+	g_winapiApiTable->GetVersionExA = (lpGetVersionEx)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetVersionExA").crypt_get());
+	g_winapiApiTable->WriteProcessMemory = (lpWriteProcessMemory)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("WriteProcessMemory").crypt_get());
+	g_winapiApiTable->GetAdaptersInfo = (lpGetAdaptersInfo)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hIphlpapi, xorstr("GetAdaptersInfo").crypt_get());
+	g_winapiApiTable->GetComputerNameA = (lpGetComputerName)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetComputerNameA").crypt_get());
+	g_winapiApiTable->GetVolumeInformationA = (lpGetVolumeInformation)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetVolumeInformationA").crypt_get());
+	g_winapiApiTable->GetDriveTypeA = (lpGetDriveType)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetDriveTypeA").crypt_get());
+	g_winapiApiTable->LocalAlloc = (lpLocalAlloc)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("LocalAlloc").crypt_get());
+	g_winapiApiTable->GetModuleFileNameA = (lpGetModuleFileName)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetModuleFileNameA").crypt_get());
+	g_winapiApiTable->GetThreadContext = (lpGetThreadContext)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetThreadContext").crypt_get());
+	g_winapiApiTable->WaitForSingleObject = (lpWaitForSingleObject)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("WaitForSingleObject").crypt_get());
+	g_winapiApiTable->ResumeThread = (lpResumeThread)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("ResumeThread").crypt_get());
+	g_winapiApiTable->CloseHandle = (lpCloseHandle)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("CloseHandle").crypt_get());
+	g_winapiApiTable->GetDeviceDriverBaseNameA = (lpGetDeviceDriverBaseName)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hPsapi, xorstr("GetDeviceDriverBaseNameA").crypt_get());
+	g_winapiApiTable->EnumDeviceDrivers = (lpEnumDeviceDrivers)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hPsapi, xorstr("EnumDeviceDrivers").crypt_get());
+	g_winapiApiTable->GetTickCount = (lpGetTickCount)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetTickCount").crypt_get());
+	g_winapiApiTable->EnumWindows = (lpEnumWindows)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("EnumWindows").crypt_get());
+	g_winapiApiTable->GetLastError = (lpGetLastError)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetLastError").crypt_get());
+	g_winapiApiTable->GetUserNameA = (lpGetUserName)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hAdvapi32, xorstr("GetUserNameA").crypt_get());
+	g_winapiApiTable->ShellExecuteA = (lpShellExecute)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hShell32, xorstr("ShellExecuteA").crypt_get());
+	g_winapiApiTable->GetModuleBaseNameA = (lpGetModuleBaseNameA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hPsapi, xorstr("GetModuleBaseNameA").crypt_get());
+	g_winapiApiTable->SetLastError = (lpSetLastError)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("SetLastError").crypt_get());
+	g_winapiApiTable->CallNextHookEx = (lpCallNextHookEx)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("CallNextHookEx").crypt_get());
+	g_winapiApiTable->SetWindowsHookExA = (lpSetWindowsHookEx)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("SetWindowsHookExA").crypt_get());
+	g_winapiApiTable->NtResumeProcess = (lpNtResumeProcess)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hNtdll, xorstr("NtResumeProcess").crypt_get());
+	g_winapiApiTable->AddVectoredExceptionHandler = (lpAddVectoredExceptionHandler)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("AddVectoredExceptionHandler").crypt_get());
+	g_winapiApiTable->VirtualQuery = (lpVirtualQuery)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("VirtualQuery").crypt_get());
+	g_winapiApiTable->MessageBoxTimeout = (lpMessageBoxTimeout)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("MessageBoxTimeoutA").crypt_get());
+	g_winapiApiTable->NtClose = (lpNtClose)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hNtdll, xorstr("NtClose").crypt_get());
+	g_winapiApiTable->NtSetInformationDebugObject = (lpNtSetInformationDebugObject)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hNtdll, xorstr("NtSetInformationDebugObject").crypt_get());
+	g_winapiApiTable->NtRemoveProcessDebug = (lpNtRemoveProcessDebug)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hNtdll, xorstr("NtRemoveProcessDebug").crypt_get());
+	g_winapiApiTable->FormatMessageA = (lpFormatMessage)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("FormatMessageA").crypt_get());
+	g_winapiApiTable->MultiByteToWideChar = (lpMultiByteToWideChar)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("MultiByteToWideChar").crypt_get());
+	g_winapiApiTable->WideCharToMultiByte = (lpWideCharToMultiByte)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("WideCharToMultiByte").crypt_get());
+	g_winapiApiTable->CreateProcessA = (lpCreateProcessA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("CreateProcessA").crypt_get());
+	g_winapiApiTable->GetStartupInfoA = (lpGetStartupInfoA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetStartupInfoA").crypt_get());
+	g_winapiApiTable->GetExitCodeProcess = (lpGetExitCodeProcess)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetExitCodeProcess").crypt_get());
+	g_winapiApiTable->PostQuitMessage = (lpPostQuitMessage)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("PostQuitMessage").crypt_get());
+	g_winapiApiTable->OpenProcess = (lpOpenProcess)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("OpenProcess").crypt_get());
+	g_winapiApiTable->GetCurrentThreadId = (lpGetCurrentThreadId)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetCurrentThreadId").crypt_get());
+	g_winapiApiTable->GetModuleInformation = (lpGetModuleInformation)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hPsapi, xorstr("GetModuleInformation").crypt_get());
+	g_winapiApiTable->GetMappedFileNameA = (lpGetMappedfilename)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hPsapi, xorstr("GetMappedFileNameA").crypt_get());
+	g_winapiApiTable->GetModuleHandleExW = (lpGetModuleHandleExW)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetModuleHandleExW").crypt_get());
+	g_winapiApiTable->FreeLibrary = (lpFreeLibrary)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("FreeLibrary").crypt_get());
+	g_winapiApiTable->GetModuleHandleW = (lpGetModuleHandleW)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("GetModuleHandleW").crypt_get());
+	g_winapiApiTable->CallWindowProcA = (lpCallWindowProcA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("CallWindowProcA").crypt_get());
+	g_winapiApiTable->FindWindowExA = (lpFindWindowExA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("FindWindowExA").crypt_get());
+	g_winapiApiTable->GetWindowThreadProcessId = (lpGetWindowThreadProcessId)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("GetWindowThreadProcessId").crypt_get());
+	g_winapiApiTable->IsWindowVisible = (lpIsWindowVisible)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("IsWindowVisible").crypt_get());
+	g_winapiApiTable->GetClassNameA = (lpGetClassNameA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("GetClassNameA").crypt_get());
+	g_winapiApiTable->GetWindowTextA = (lpGetWindowTextA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("GetWindowTextA").crypt_get());
+	g_winapiApiTable->SetWindowLongA = (lpSetWindowLongA)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hUser32, xorstr("SetWindowLongA").crypt_get());
+	g_winapiApiTable->Thread32First = (lpThread32First)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("Thread32First").crypt_get());
+	g_winapiApiTable->Thread32Next = (lpThread32Next)g_winapiApiTable->GetProcAddress(g_winapiModuleTable->hKernel32, xorstr("Thread32Next").crypt_get());
+}
+

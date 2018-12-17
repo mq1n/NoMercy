@@ -1,23 +1,38 @@
 #pragma once
 #include "Windows_Structs.h"
+#include <Windows.h>
+#include <Psapi.h>
+#include <ProcessSnapshot.h>
+#include <WinInet.h>
+#include <iphlpapi.h>
+#include <TlHelp32.h>
+#include <wincrypt.h>
+#include <WinTrust.h>
+#include <mscat.h>
+#include <Softpub.h>
+#include <AccCtrl.h>
+#include <Aclapi.h>
+#include <combaseapi.h>
+
+typedef HANDLE EVT_HANDLE, *PEVT_HANDLE;
 
 typedef FARPROC(WINAPI* lpGetProcAddress)(_In_ HMODULE hModule, _In_ LPCSTR  lpProcName);
-typedef HMODULE(WINAPI* lpGetModuleHandleA)(_In_opt_ LPCTSTR lpModuleName);
+typedef HMODULE(WINAPI* lpGetModuleHandleA)(_In_opt_ LPCSTR lpModuleName);
 typedef HMODULE(WINAPI* lpLoadLibraryA)(_In_opt_ LPCSTR lpFileName);
 typedef BOOL(WINAPI* lpIsDebuggerPresent)(void);
 typedef BOOL(WINAPI* lpAllocConsole)(void);
-typedef int(WINAPI* lplstrcmpA)(_In_ LPCTSTR lpString1, _In_ LPCTSTR lpString2);
-typedef UINT(WINAPI* lpGetWindowsDirectoryA)(_Out_ LPTSTR lpBuffer, _In_  UINT uSize);
+typedef int(WINAPI* lplstrcmpA)(_In_ LPCSTR lpString1, _In_ LPCSTR lpString2);
+typedef UINT(WINAPI* lpGetWindowsDirectoryA)(_Out_ LPSTR lpBuffer, _In_  UINT uSize);
 typedef VOID(WINAPI* lpSleep)(_In_ DWORD dwMilliseconds);
 typedef NTSTATUS(NTAPI* lpNtWriteVirtualMemory)(HANDLE, PVOID, CONST VOID *, SIZE_T, PSIZE_T);
 typedef int (WINAPI* lpWinStationTerminateProcess)(HANDLE hServer, DWORD dwProcessId, UINT uExitCode);
 typedef void(WINAPI* lpOutputDebugString)(_In_ LPCSTR str);
 typedef HANDLE(WINAPI* lpCreateToolhelp32Snapshot)(_In_ DWORD dwFlags, _In_ DWORD th32ProcessID);
-typedef BOOL(WINAPI* lpProcess32First)(_In_ HANDLE hSnapshot, _Inout_ LPPROCESSENTRY32 lppe);
-typedef BOOL(WINAPI* lpProcess32Next)(_In_ HANDLE hSnapshot, _Out_ LPPROCESSENTRY32 lppe);
-typedef BOOL(WINAPI* lpModule32First)(_In_ HANDLE hSnapshot, _Inout_ LPMODULEENTRY32 lpme);
-typedef BOOL(WINAPI* lpModule32Next)(_In_ HANDLE hSnapshot, _Out_ LPMODULEENTRY32 lpme);
-typedef DWORD(WINAPI* lpCharUpperBuffA)(_Inout_ LPTSTR lpsz, _In_ DWORD cchLength);
+typedef BOOL(WINAPI* lpProcess32First)(_In_ HANDLE hSnapshot, _Inout_ LPPROCESSENTRY32W lppe);
+typedef BOOL(WINAPI* lpProcess32Next)(_In_ HANDLE hSnapshot, _Out_ LPPROCESSENTRY32W lppe);
+typedef BOOL(WINAPI* lpModule32First)(_In_ HANDLE hSnapshot, _Inout_ LPMODULEENTRY32W lpme);
+typedef BOOL(WINAPI* lpModule32Next)(_In_ HANDLE hSnapshot, _Out_ LPMODULEENTRY32W lpme);
+typedef DWORD(WINAPI* lpCharUpperBuffA)(_Inout_ LPSTR lpsz, _In_ DWORD cchLength);
 typedef int(WINAPI* lpMessageBoxA)(HWND wind, LPCSTR msg, LPCSTR title, UINT type);
 typedef NTSTATUS(WINAPI* lpNtQueryInformationProcess)(HANDLE a, PROCESSINFOCLASS b, PVOID c, ULONG d, PULONG e);
 typedef NTSTATUS(WINAPI* lpNtQueryInformationThread)(HANDLE, LONG, PVOID, ULONG, PULONG);
@@ -37,12 +52,12 @@ typedef LPVOID(WINAPI* lpCreateThread)(LPSECURITY_ATTRIBUTES  lpThreadAttributes
 typedef BOOL(WINAPI* lpGetVersionEx)(_Inout_ LPOSVERSIONINFO lpVersionInfo);
 typedef BOOL(WINAPI* lpWriteProcessMemory)(HANDLE hProcess, LPVOID lpBaseAddress, LPCVOID lpBuffer, SIZE_T nSize, SIZE_T *lpNumberOfBytesWritten);
 typedef DWORD(WINAPI* lpGetAdaptersInfo)(_Out_ PIP_ADAPTER_INFO pAdapterInfo, _Inout_ PULONG pOutBufLen);
-typedef BOOL(WINAPI* lpGetComputerName)(_Out_ LPTSTR lpBuffer, _Inout_ LPDWORD lpnSize);
+typedef BOOL(WINAPI* lpGetComputerName)(_Out_ LPSTR lpBuffer, _Inout_ LPDWORD lpnSize);
 typedef BOOL(WINAPI* lpGetVolumeInformation)(LPCTSTR lpRootPathName, LPTSTR  lpVolumeNameBuffer, DWORD   nVolumeNameSize, LPDWORD lpVolumeSerialNumber,
 	LPDWORD lpMaximumComponentLength, LPDWORD lpFileSystemFlags, LPTSTR  lpFileSystemNameBuffer, DWORD   nFileSystemNameSize);
 typedef UINT(WINAPI* lpGetDriveType)(_In_opt_ LPCTSTR lpRootPathName);
 typedef HLOCAL(WINAPI* lpLocalAlloc)(_In_ UINT uFlags, _In_ SIZE_T uBytes);
-typedef DWORD(WINAPI* lpGetModuleFileName)(_In_opt_ HMODULE hModule, _Out_ LPTSTR lpFilename, _In_ DWORD nSize);
+typedef DWORD(WINAPI* lpGetModuleFileName)(_In_opt_ HMODULE hModule, _Out_ LPSTR lpFilename, _In_ DWORD nSize);
 typedef BOOL(WINAPI* lpGetThreadContext)(_In_ HANDLE hThread, _Inout_ LPCONTEXT lpContext);
 typedef DWORD(WINAPI* lpWaitForSingleObject)(_In_ HANDLE hHandle, _In_ DWORD  dwMilliseconds);
 typedef DWORD(WINAPI* lpResumeThread)(_In_ HANDLE hThread);
@@ -52,7 +67,7 @@ typedef BOOL(WINAPI* lpEnumDeviceDrivers)(_Out_ LPVOID  *lpImageBase, _In_  DWOR
 typedef DWORD(WINAPI* lpGetTickCount)(void);
 typedef BOOL(WINAPI* lpEnumWindows)(_In_ WNDENUMPROC lpEnumFunc, _In_ LPARAM      lParam);
 typedef DWORD(WINAPI* lpGetLastError)(void);
-typedef BOOL(WINAPI* lpGetUserName)(_Out_   LPTSTR  lpBuffer, _Inout_ LPDWORD lpnSize);
+typedef BOOL(WINAPI* lpGetUserName)(_Out_   LPSTR  lpBuffer, _Inout_ LPDWORD lpnSize);
 typedef HINSTANCE(WINAPI* lpShellExecute)(_In_opt_ HWND    hwnd, _In_opt_ LPCTSTR lpOperation, _In_     LPCTSTR lpFile,
 	_In_opt_ LPCTSTR lpParameters, _In_opt_ LPCTSTR lpDirectory, _In_     INT     nShowCmd);
 typedef DWORD(WINAPI* lpGetModuleBaseNameA)(_In_     HANDLE  hProcess, _In_opt_ HMODULE hModule, _Out_    LPTSTR  lpBaseName, _In_     DWORD   nSize);
@@ -103,6 +118,7 @@ typedef BOOL(WINAPI* lpDeleteFileA)(LPCSTR lpFileName);
 typedef DWORD(WINAPI* lpGetFileAttributesA)(LPCSTR lpFileName);
 typedef BOOL(WINAPI* lpFindClose)(HANDLE hFindFile);
 typedef BOOL(WINAPI* lpLookupPrivilegeValueA)(LPCSTR lpSystemName, LPCSTR lpName, PLUID lpLuid);
+typedef BOOL(WINAPI* lpLookupPrivilegeValueW)(LPCWSTR lpSystemName, LPCWSTR lpName, PLUID   lpLuid);
 typedef BOOL(WINAPI* lpAdjustTokenPrivileges)(HANDLE TokenHandle, BOOL DisableAllPrivileges, PTOKEN_PRIVILEGES NewState, DWORD BufferLength,
 	PTOKEN_PRIVILEGES PreviousState, PDWORD ReturnLength);
 typedef BOOL(WINAPI* lpOpenProcessToken)(HANDLE ProcessHandle, DWORD DesiredAccess, PHANDLE TokenHandle);
@@ -151,7 +167,6 @@ typedef BOOL(WINAPI* lpEndTask)(HWND, BOOL, BOOL);
 typedef void(WINAPI* lpDebugBreak)(void);
 typedef BOOL(WINAPI* lpGetModuleHandleExA)(DWORD dwFlags, LPCSTR lpModuleName, HMODULE* phModule);
 typedef BOOL(WINAPI* lpReadFile)(HANDLE hFile, LPVOID lpBuffer, DWORD nNumberOfBytesToRead, LPDWORD lpNumberOfBytesRead, LPOVERLAPPED lpOverlapped);
-typedef NTSTATUS(WINAPI* lpLdrGetDllFullName)(int handle, PUNICODE_STRING dest);
 typedef NTSTATUS(NTAPI* lpNtSetInformationProcess)(HANDLE ProcessHandle, ULONG ProcessInformationClass, PVOID ProcessInformation, ULONG ProcessInformationLength);
 typedef NTSTATUS(NTAPI* lpNtAllocateVirtualMemory)(HANDLE ProcessHandle, PVOID *BaseAddress, ULONG_PTR ZeroBits, PSIZE_T RegionSize, ULONG AllocationType, ULONG Protect);
 typedef HWND(WINAPI* lpGetShellWindow)(VOID);
@@ -174,8 +189,8 @@ typedef VOID(WINAPI* lpEnterCriticalSection)(LPCRITICAL_SECTION lpCriticalSectio
 typedef VOID(WINAPI* lpLeaveCriticalSection)(LPCRITICAL_SECTION lpCriticalSection);
 typedef VOID(WINAPI* lpDeleteCriticalSection)(LPCRITICAL_SECTION lpCriticalSection);
 typedef DWORD(WINAPI* lpGetProcessId)(HANDLE Process);
-typedef DWORD(WINAPI* lpGetProcessImageFileNameA)(HANDLE hProcess, LPTSTR lpImageFileName, DWORD nSize);
-typedef DWORD(WINAPI* lpGetLogicalDriveStringsA)(DWORD nBufferLength, LPTSTR lpBuffer);
+typedef DWORD(WINAPI* lpGetProcessImageFileNameA)(HANDLE hProcess, LPSTR lpImageFileName, DWORD nSize);
+typedef DWORD(WINAPI* lpGetLogicalDriveStringsA)(DWORD nBufferLength, LPSTR lpBuffer);
 typedef int(WINAPI* lpGetSystemMetrics)(int nIndex);
 typedef NTSTATUS(NTAPI* lpRtlAdjustPrivilege)(ULONG Privilege, BOOLEAN Enable, BOOLEAN CurrentThread, PBOOLEAN Enabled);
 typedef BOOL(WINAPI* lpEnumProcesses)(DWORD *pProcessIds, DWORD cb, DWORD *pBytesReturned);
@@ -191,8 +206,8 @@ typedef HANDLE(WINAPI* lpOpenEventA)(DWORD dwDesiredAccess, BOOL bInheritHandle,
 typedef HLOCAL(WINAPI* lpLocalFree)(HLOCAL hMem);
 typedef DWORD(WINAPI* lpSetEntriesInAclA)(ULONG cCountOfExplicitEntries, PEXPLICIT_ACCESS pListOfExplicitEntries, PACL OldAcl, PACL *NewAcl);
 typedef BOOL(WINAPI* lpSetPriorityClass)(HANDLE hProcess, DWORD dwPriorityClass);
-typedef VOID(WINAPI* lpBuildExplicitAccessWithNameA)(PEXPLICIT_ACCESS pExplicitAccess, LPTSTR pTrusteeName, DWORD AccessPermissions, ACCESS_MODE AccessMode, DWORD Inheritance);
-typedef BOOL(WINAPI* lpConvertStringSecurityDescriptorToSecurityDescriptorA)(LPCTSTR StringSecurityDescriptor, DWORD  StringSDRevision, PSECURITY_DESCRIPTOR *SecurityDescriptor, PULONG SecurityDescriptorSize);
+typedef VOID(WINAPI* lpBuildExplicitAccessWithNameA)(PEXPLICIT_ACCESS pExplicitAccess, LPSTR pTrusteeName, DWORD AccessPermissions, ACCESS_MODE AccessMode, DWORD Inheritance);
+typedef BOOL(WINAPI* lpConvertStringSecurityDescriptorToSecurityDescriptorA)(LPCSTR StringSecurityDescriptor, DWORD  StringSDRevision, PSECURITY_DESCRIPTOR *SecurityDescriptor, PULONG SecurityDescriptorSize);
 typedef BOOL(WINAPI* lpSetKernelObjectSecurity)(HANDLE Handle, SECURITY_INFORMATION SecurityInformation, PSECURITY_DESCRIPTOR SecurityDescriptor);
 typedef HRESULT(WINAPI* lpCoInitialize)(LPVOID pvReserved);
 typedef void(WINAPI* lpCoUninitialize)(void);
@@ -225,7 +240,6 @@ typedef NTSTATUS(NTAPI* lpZwQueryDirectoryObject)(HANDLE DirectoryHandle, PVOID 
 typedef VOID(NTAPI* lpRtlInitUnicodeString)(PUNICODE_STRING DestinationString, PCWSTR SourceString);
 typedef BOOL(WINAPI* lpDeviceIoControl)(HANDLE hDevice, DWORD dwIoControlCode, LPVOID lpInBuffer, DWORD nInBufferSize, LPVOID lpOutBuffer,
 	DWORD nOutBufferSize, LPDWORD lpBytesReturned, LPOVERLAPPED lpOverlapped);
-typedef BOOL(WINAPI* lpSetProcessMitigationPolicy)(PROCESS_MITIGATION_POLICY MitigationPolicy, PVOID lpBuffer, SIZE_T dwLength);
 typedef int(WINAPI* lpGetThreadPriority)(HANDLE hThread);
 typedef BOOL(WINAPI* lpSetThreadPriority)(HANDLE hThread, int nPriority);
 typedef HINTERNET(WINAPI* lpInternetConnectA)(HINTERNET hInternet, LPCSTR lpszServerName, INTERNET_PORT nServerPort, LPCSTR lpszUserName, LPCSTR lpszPassword,
@@ -249,15 +263,13 @@ typedef BOOL(WINAPI* lpKillTimer)(HWND hWnd, UINT_PTR uIDEvent);
 typedef DWORD(NTAPI* lpRtlComputeCrc32)(DWORD dwInitial, const BYTE* pData, int iLen);
 typedef NTSTATUS(NTAPI* lpNtRaiseHardError)(NTSTATUS ErrorStatus, ULONG NumberOfParameters, ULONG UnicodeStringParameterMask,
 	PVOID* Parameters, HARDERROR_RESPONSE_OPTION ResponseOption, PHARDERROR_RESPONSE Response);
-typedef HWINEVENTHOOK(WINAPI* lpSetWinEventHook)(DWORD eventMin, DWORD eventMax, HMODULE hmodWinEventProc, WINEVENTPROC pfnWinEventProc,
-	DWORD idProcess, DWORD idThread, DWORD dwFlags);
 typedef BOOL(WINAPI* lpGetWindowInfo)(HWND hwnd, PWINDOWINFO pwi);
 typedef LPWSTR*(WINAPI* lpCommandLineToArgvW)(LPCWSTR lpCmdLine, int* pNumArgs);
 typedef LPWSTR(WINAPI* lpGetCommandLineW)(VOID);
 typedef NTSTATUS(NTAPI* lpNtGetNextThread)(HANDLE ProcessHandle, HANDLE ThreadHandle, ACCESS_MASK DesiredAccess, ULONG HandleAttributes, ULONG Flags, PHANDLE NewThreadHandle);
 typedef NTSTATUS(NTAPI* lpNtGetNextProcess)(HANDLE ProcessHandle, ACCESS_MASK DesiredAccess, ULONG HandleAttributes, ULONG Flags, PHANDLE NewProcessHandle);
 typedef BOOL(WINAPI* lpProcessIdToSessionId)(DWORD dwProcessId, DWORD *pSessionId);
-typedef HANDLE(WINAPI* lpCreateMutexA)(LPSECURITY_ATTRIBUTES lpMutexAttributes, BOOL bInitialOwner, LPCTSTR lpName);
+typedef HANDLE(WINAPI* lpCreateMutexA)(LPSECURITY_ATTRIBUTES lpMutexAttributes, BOOL bInitialOwner, LPCSTR lpName);
 typedef BOOL(WINAPI* lpSetHandleInformation)(HANDLE hObject, DWORD dwMask, DWORD dwFlags);
 typedef UINT(WINAPI* lpSetErrorMode)(UINT uMode);
 typedef BOOL(WINAPI *lpIsWow64Process) (HANDLE, PBOOL);
@@ -287,8 +299,6 @@ typedef BOOL(WINAPI* lpEvtNext)(EVT_HANDLE ResultSet, DWORD EventsSize, PEVT_HAN
 typedef BOOL(WINAPI* lpEvtRender)(EVT_HANDLE Context, EVT_HANDLE Fragment, DWORD Flags, DWORD BufferSize, PVOID Buffer,
 	PDWORD BufferUsed, PDWORD PropertyCount);
 typedef EVT_HANDLE(WINAPI* lpEvtOpenPublisherMetadata)(EVT_HANDLE Session, LPCWSTR PublisherId, LPCWSTR LogFilePath, LCID Locale, DWORD Flags);
-typedef BOOL(WINAPI* lpEvtFormatMessage)(EVT_HANDLE PublisherMetadata, EVT_HANDLE Event, DWORD MessageId, DWORD ValueCount,
-	PEVT_VARIANT Values, DWORD Flags, DWORD BufferSize, LPWSTR Buffer, PDWORD BufferUsed);
 typedef BOOL(WINAPI* lpEvtClose)(EVT_HANDLE Object);
 typedef HGLOBAL(WINAPI* lpGlobalFree)(HGLOBAL hMem);
 typedef PVOID(NTAPI* lpRtlAllocateHeap)(__in PVOID HeapHandle, __in_opt ULONG Flags, __in SIZE_T Size);
@@ -303,7 +313,8 @@ typedef void(WINAPI* lpDnsApiFree)(PVOID pData);
 typedef int(WINAPI* lpDnsGetCacheDataTable)(PDNS_CACHE_ENTRY);
 typedef BOOLEAN(WINAPI* lpRtlAddFunctionTable)(PRUNTIME_FUNCTION FunctionTable, DWORD EntryCount, DWORD_PTR BaseAddress);
 typedef BOOL(WINAPI* lpDLLMain)(HMODULE, DWORD, PVOID);
-typedef NTSTATUS(NTAPI* lpRtlAddAccessDeniedAce)(PACL	pAcl,DWORD	dwAceRevision,DWORD	AccessMask,PSID		pSid);
+typedef NTSTATUS(NTAPI* lpRtlAddAccessDeniedAce)(PACL pAcl,DWORD dwAceRevision, ACCESS_MASK	AccessMask, PSID pSid);
+typedef NTSTATUS(NTAPI* lpRtlAddAccessAllowedAce)(PACL pAcl, DWORD dwAceRevision, ACCESS_MASK AccessMask, PSID pSid);
 typedef PVOID(NTAPI* lpRtlImageDirectoryEntryToData)(PVOID ImageBase, BOOLEAN MappedAsImage, USHORT DirectoryEntry, PULONG Size);
 typedef BOOL(WINAPI* lpWow64DisableWow64FsRedirection)(PVOID *OldValue);
 typedef BOOL(WINAPI* lpWow64RevertWow64FsRedirection)(PVOID OldValue);
@@ -311,13 +322,6 @@ typedef PRTL_DEBUG_INFORMATION(NTAPI* lpRtlCreateQueryDebugBuffer)(IN ULONG  Siz
 typedef NTSTATUS(NTAPI* lpRtlQueryProcessDebugInformation)(IN ULONG  ProcessId, IN ULONG  DebugInfoClassMask, IN OUT PRTL_DEBUG_INFORMATION   DebugBuffer);
 typedef NTSTATUS(NTAPI* lpRtlDestroyQueryDebugBuffer)(IN PRTL_DEBUG_INFORMATION   DebugBuffer);
 typedef VOID(NTAPI* lpLdrShutdownProcess)(VOID);
-typedef DWORD(WINAPI* lpPssCaptureSnapshot)(HANDLE ProcessHandle, PSS_CAPTURE_FLAGS CaptureFlags, DWORD ThreadContextFlags, HPSS* SnapshotHandle);
-typedef DWORD(WINAPI* lpPssFreeSnapshot)(HANDLE ProcessHandle, HPSS SnapshotHandle);
-typedef DWORD(WINAPI* lpPssQuerySnapshot)(HPSS SnapshotHandle, PSS_QUERY_INFORMATION_CLASS InformationClass, void* Buffer, DWORD BufferLength);
-typedef DWORD(WINAPI* lpPssWalkSnapshot)(HPSS SnapshotHandle, PSS_WALK_INFORMATION_CLASS InformationClass, HPSSWALK WalkMarkerHandle, void* Buffer, DWORD BufferLength);
-typedef DWORD(WINAPI* lpPssDuplicateSnapshot)(HANDLE SourceProcessHandle, HPSS SnapshotHandle, HANDLE TargetProcessHandle, HPSS* TargetSnapshotHandle, PSS_DUPLICATE_FLAGS Flags);
-typedef DWORD(WINAPI* lpPssWalkMarkerCreate)(PSS_ALLOCATOR const *Allocator, HPSSWALK* WalkMarkerHandle);
-typedef DWORD(WINAPI* lpPssWalkMarkerFree)(HPSSWALK WalkMarkerHandle);
 typedef NTSTATUS(NTAPI* lpNtCreateSection)(PHANDLE SectionHandle, ACCESS_MASK DesiredAccess, POBJECT_ATTRIBUTES ObjectAttributes, PLARGE_INTEGER MaximumSize,
 	ULONG SectionPageProtection, ULONG AllocationAttributes, HANDLE FileHandle);
 typedef NTSTATUS(NTAPI* lpNtMapViewOfSection)(HANDLE SectionHandle, HANDLE ProcessHandle, PVOID *BaseAddress, ULONG_PTR ZeroBits, SIZE_T CommitSize, PLARGE_INTEGER SectionOffset,
@@ -359,5 +363,33 @@ typedef NTSTATUS(NTAPI* lpNtTerminateThread)(HANDLE ThreadHandle, NTSTATUS ExitS
 typedef HANDLE(WINAPI* lpGetProcessHeap)();
 typedef NTSTATUS(NTAPI* lpNtDelayExecution)(BOOL Alertable, PLARGE_INTEGER DelayInterval);
 typedef NTSTATUS(NTAPI* lpNtFreeVirtualMemory)(HANDLE ProcessHandle, PVOID *BaseAddress, PSIZE_T RegionSize, ULONG FreeType);
-typedef NTSTATUS(NTAPI* lpNtSystemDebugControl)(IN SYSDBG_COMMAND Command, IN PVOID InputBuffer OPTIONAL, IN ULONG InputBufferLength, OUT PVOID OutputBuffer OPTIONAL, IN ULONG OutputBufferLength, OUT PULONG ReturnLength OPTIONAL);
+typedef NTSTATUS(NTAPI* lpNtSystemDebugControl)(IN SYSDBG_COMMAND Command, PVOID InputBuffer, ULONG InputBufferLength, PVOID OutputBuffer, ULONG OutputBufferLength, PULONG ReturnLength);
 typedef NTSTATUS(NTAPI* lpNtSetSystemInformation)(SYSTEM_INFORMATION_CLASS SystemInformationClass, PVOID SystemInformation, ULONG SystemInformationLength);
+typedef LSTATUS(WINAPI* lpRegGetValueA)(HKEY hkey, LPCSTR lpSubKey, LPCSTR lpValue, DWORD dwFlags, LPDWORD pdwType, PVOID pvData, LPDWORD pcbData);
+typedef BOOL(WINAPI* lpQueryFullProcessImageNameW)(HANDLE hProcess, DWORD dwFlags, LPWSTR lpExeName, PDWORD lpdwSize);
+typedef HWINEVENTHOOK(WINAPI* lpSetWinEventHook)(DWORD eventMin, DWORD eventMax, HMODULE hmodWinEventProc, WINEVENTPROC pfnWinEventProc, DWORD idProcess, DWORD idThread, DWORD dwFlags);
+typedef BOOL(WINAPI* lpUnhookWinEvent)(HWINEVENTHOOK hWinEventHook);
+typedef BOOL(WINAPI* lpIsWindow)(HWND hWnd);
+typedef BOOL(WINAPI* lpGetWindowDisplayAffinity)(HWND hWnd, DWORD* pdwAffinity);
+typedef BOOL(WINAPI* lpSetWindowDisplayAffinity)(HWND hWnd, DWORD dwAffinity);
+typedef NTSTATUS(NTAPI* lpRtlCreateTimerQueue)(PHANDLE TimerQueueHandle);
+typedef NTSTATUS(NTAPI* lpRtlDeleteTimerQueue)(HANDLE TimerQueueHandle);
+typedef NTSTATUS(NTAPI* lpRtlCreateTimer)(HANDLE TimerQueueHandle, PHANDLE Handle, WAITORTIMERCALLBACKFUNC Function, PVOID Context, DWORD DueTime, DWORD Period, ULONG Flags);
+typedef NTSTATUS(NTAPI* lpRtlDeleteTimer)(HANDLE TimerQueueHandle, HANDLE TimerHandle, HANDLE CompletionEvent);
+typedef UINT(WINAPI* lpGetSystemDirectoryA)(LPSTR lpBuffer, UINT uSize);
+typedef BOOL(WINAPI* lpGetNamedPipeServerProcessId)(HANDLE Pipe, PULONG ServerProcessId);
+typedef NTSTATUS(NTAPI* lpNtYieldExecution)();
+typedef HANDLE(WINAPI* lpCreateEventA)(LPSECURITY_ATTRIBUTES lpEventAttributes, BOOL bManualReset, BOOL bInitialState, LPCSTR lpName);
+typedef BOOL(WINAPI* lpResetEvent)(HANDLE hEvent);
+typedef BOOL(WINAPI* lpSetEvent)(HANDLE hEvent);
+typedef BOOL(WINAPI* lpDuplicateTokenEx)(HANDLE hExistingToken, DWORD dwDesiredAccess, LPSECURITY_ATTRIBUTES lpTokenAttributes, SECURITY_IMPERSONATION_LEVEL ImpersonationLevel,
+	TOKEN_TYPE TokenType, PHANDLE phNewToken);
+typedef BOOL(WINAPI* lpCreateEnvironmentBlock)(LPVOID* lpEnvironment, HANDLE hToken, BOOL bInherit);
+typedef BOOL(WINAPI* lpCreateProcessAsUserA)(HANDLE hToken, LPCSTR lpApplicationName, LPSTR lpCommandLine, LPSECURITY_ATTRIBUTES lpProcessAttributes,
+	LPSECURITY_ATTRIBUTES lpThreadAttributes, BOOL bInheritHandles, DWORD dwCreationFlags, LPVOID lpEnvironment, LPCSTR lpCurrentDirectory, LPSTARTUPINFOA lpStartupInfo,
+	LPPROCESS_INFORMATION lpProcessInformation);
+typedef BOOL(WINAPI* lpDestroyEnvironmentBlock)(LPVOID lpEnvironment);
+typedef BOOL(WINAPI* lpHeapSetInformation)(HANDLE HeapHandle, HEAP_INFORMATION_CLASS HeapInformationClass, PVOID HeapInformation, SIZE_T HeapInformationLength);
+typedef BOOL(WINAPI* lpCloseWindow)(HWND hWnd);
+
+

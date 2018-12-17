@@ -3,11 +3,13 @@
 The "NoMercy" project is "the gold standard" open source Windows kernel/user mode anti cheat written with C/C++.  
 
 ## Notes;
-* Currently just developed and tested on Windows 10 x64 RS4(1804) as x64 process
+* The project will not be updated for a while, due than my computer is corrupted.
+* **The project is still under development**
+* Currently just developed and tested on Windows 10 x64 RS4(1804) as WoW64 process
 * Build 3rd party dependencies or download [released pre-compiled bundle](https://github.com/mq1n/NoMercy/releases/download/v1.0/CompiledLibs.zip) and extract .zip content to "NoMercy\Extern\CompiledLibs"
 
 ### Prerequisites
-* [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads/)
+* [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/)
 * [Windows Driver Kit](https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk)
 
 ### System requirements
@@ -49,29 +51,25 @@ The "NoMercy" project is "the gold standard" open source Windows kernel/user mod
 
 ### TODO Main features;
 
-* Node JS API server, TLS encrypted communication
+* Node JS based WebSocket API server
 * Plugin based heartbeat system
-* Crash handler integration
 * Self updater
 * Global hook engine
 * Protected network wrapper API for game <> client communication
 * Web interface
-* Remote Administration tool for manage master server connections
+* ARK like Remote Administration tool for manage master server connections
 
 ### TODO Network Features;
 
 * Sequence
-* Serializer
-* Server daemon
-* Dynamic key re-genereation on every 60sec for every peer
-* P2P pool for master server
+* Daemon for master server(s)
+* P2P pool for master server(s)
 
 ### TODO Kernel features;
 
 * Driver to Service Logger instance
 * Integrity check for self OB callbacks
-* Monitor section activity with minifilter (IRP_MJ_ACQUIRE_FOR_SECTION_SYNCHRONIZATION)
-* Enumerate kernel memory for find manually mapped and hidden(unlinked), deleted(file), non-signed drivers, hijacked objects, non device created drivers
+* Enumerate kernel memory for find manually mapped and hidden(unlinked), deleted(file), non-signed drivers, hijacked objects, non device created drivers also check loaded driver file-memory integritys
 * Anti hook (Inline, IAT, EAT, SSDT, SSSDT, IDT)
 * APC monitor for block injection
 * Anti speed hack based time modification detection/manipulation
@@ -93,7 +91,6 @@ The "NoMercy" project is "the gold standard" open source Windows kernel/user mod
 * Block suspend access to our kernel threads from System(4) process
 * Split handle owner system apps(csrss, lsass, pcasvc) accesses
 * Scan unloaded drivers(MmUnloadedDriver-MmLastUnloadedDriver) Also manipulation check just like list is it null, list is filled with fake modules(time ranges)
-* Manually iterate all drivers inside memory an check their integritys
 * Hook & Analyse IRP_MJ_CREATE calls
 
 ### TODO WebAPI Features;
@@ -134,6 +131,7 @@ The "NoMercy" project is "the gold standard" open source Windows kernel/user mod
 * [xxHash](https://github.com/Cyan4973/xxHash) - [License](https://github.com/Cyan4973/xxHash/blob/dev/LICENSE)
 * [rewolf-wow64ext](https://github.com/rwfpl/rewolf-wow64ext) - [License](https://github.com/rwfpl/rewolf-wow64ext/blob/master/lgpl-3.0.txt)
 * [ReflectiveDLLRefresher](https://github.com/CylanceVulnResearch/ReflectiveDLLRefresher) - [License](https://github.com/CylanceVulnResearch/ReflectiveDLLRefresher/blob/master/LICENSE)
+* [Kernel-Bridge](https://github.com/HoShiMin/Kernel-Bridge) - [License](https://github.com/HoShiMin/Kernel-Bridge/blob/master/LICENSE)
 
 ### Protector SDK files
 * [Themida/CodeVirtualizer](https://www.oreans.com)

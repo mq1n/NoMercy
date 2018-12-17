@@ -90,7 +90,7 @@
 /* #undef HAVE_FSYNC */
 /* #undef HAVE_GETHOSTBYADDR_R */
 /* #undef HAVE_GETHRTIME */
-#define HAVE_GETNAMEINFO 1
+/* #undef HAVE_GETNAMEINFO */
 /* #undef HAVE_GETPASS */
 /* #undef HAVE_GETPASSPHRASE */
 /* #undef HAVE_GETPWNAM */
@@ -138,7 +138,7 @@
 /* #undef DNS_USE_CPU_CLOCK_FOR_ID */
 /* #undef HAVE_EPOLL */
 /* #undef HAVE_EVENT_PORTS */
-#define HAVE_INET_NTOP 1
+/* #undef HAVE_INET_NTOP */
 /* #undef HAVE_WORKING_KQUEUE */
 /* #undef HAVE_TIMERADD */
 /* #undef HAVE_TIMERCLEAR */
@@ -169,8 +169,8 @@
 /* #undef WORDS_BIGENDIAN */
 
 /* Type sizes */
-#define SIZEOF_VOIDP     8
-#define SIZEOF_CHARP     8
+#define SIZEOF_VOIDP     4
+#define SIZEOF_CHARP     4
 #define SIZEOF_LONG      4
 #define SIZEOF_SHORT     2
 #define SIZEOF_INT       4
@@ -214,12 +214,12 @@
 /*
  * Platform specific CMake files
  */
-#define MACHINE_TYPE "x86_64"
+#define MACHINE_TYPE "AMD64"
 /* #undef HAVE_LINUX_LARGE_PAGES */
 /* #undef HAVE_SOLARIS_LARGE_PAGES */
 /* #undef HAVE_SOLARIS_ATOMIC */
 /* #undef HAVE_SOLARIS_STYLE_GETHOST */
-#define SYSTEM_TYPE "Win64"
+#define SYSTEM_TYPE "Win32"
 /* Windows stuff, mostly functions, that have Posix analogs but named differently */
 /* #undef IPPROTO_IPV6 */
 /* #undef IPV6_V6ONLY */
@@ -389,15 +389,15 @@
 #define DOT_FRM_VERSION 6
 #define MYSQL_VERSION_MAJOR 6
 #define MYSQL_VERSION_MINOR 1
-#define MYSQL_VERSION_PATCH 10
+#define MYSQL_VERSION_PATCH 11
 #define MYSQL_VERSION_EXTRA ""
 #define PACKAGE "mysql"
 #define PACKAGE_BUGREPORT ""
 #define PACKAGE_NAME "MySQL Server"
-#define PACKAGE_STRING "MySQL Server 6.1.10"
+#define PACKAGE_STRING "MySQL Server 6.1.11"
 #define PACKAGE_TARNAME "mysql"
-#define PACKAGE_VERSION "6.1.10"
-#define VERSION "6.1.10"
+#define PACKAGE_VERSION "6.1.11"
+#define VERSION "6.1.11"
 #define PROTOCOL_VERSION 10
 
 /*

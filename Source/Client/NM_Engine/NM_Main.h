@@ -1,5 +1,4 @@
 #pragma once
-
 #pragma warning(disable: 4091)
 
 #include <SDKDDKVer.h>
@@ -59,15 +58,32 @@
 #include <ShellAPI.h>
 #include <winevt.h>
 #include <Softpub.h>
+#include <ProcessSnapshot.h>
+#include <winreg.h>
+#include <nb30.h>
+#include <fltUser.h>
+#include <WtsApi32.h>
+#include <Userenv.h>
 
 #include "NM_App.h"
 #include "Windows_Structs.h"
 
-namespace Gdiplus
-{
-	using std::min;
-	using std::max;
-};
+#include <xorstr.hpp>
+
+using std::min; 
+using std::max;
+
+#ifdef or
+#undef or
+#endif
+
+#ifdef and
+#undef and
+#endif
+
+#ifdef xor
+#undef xor
+#endif
 
 #define Stringize( L )     #L 
 #define MakeString( M, L ) M(L)
@@ -75,12 +91,12 @@ namespace Gdiplus
 #define TODO_MSG __FILE__ "(" $Line ") : "
 
 #ifndef _DEBUG
-#define CUSTOM_LOG_FILENAME			XOR("NoMercy.log")
+#define CUSTOM_LOG_FILENAME			xorstr("NoMercy.log").crypt_get()
 #else
-#define CUSTOM_LOG_FILENAME			XOR("NoMercy/NoMercy.log")
+#define CUSTOM_LOG_FILENAME			xorstr("NoMercy/NoMercy.log").crypt_get()
 #endif
-#define CUSTOM_HOOK_LOG_FILENAME	XOR("NoMercy/NoMercyHook.log")
-#define CUSTOM_NET_LOG_FILENAME		XOR("NoMercy/NoMercyNetwork.log")
+#define CUSTOM_HOOK_LOG_FILENAME	xorstr("NoMercy/NoMercyHook.log").crypt_get()
+#define CUSTOM_NET_LOG_FILENAME		xorstr("NoMercy/NoMercyNetwork.log").crypt_get()
 
 #define STATUS_NO_MORE_ENTRIES				((NTSTATUS)0x8000001AL)
 #define STATUS_RESOURCE_NAME_NOT_FOUND		((NTSTATUS)0xC000008B)
@@ -91,6 +107,7 @@ namespace Gdiplus
 #define STATUS_BAD_TOKEN_TYPE				((NTSTATUS)0xC00000A8)
 #define STATUS_BUFFER_OVERFLOW				((NTSTATUS)0x80000005L)
 #define STATUS_DEBUGGER_INACTIVE			((NTSTATUS)0xC0000354L)
+#define STATUS_PORT_NOT_SET					((NTSTATUS)0xC0000353L)
 #define STATUS_SUCCESS						((NTSTATUS)0x00000000L)
 #define STATUS_UNSUCCESSFUL					((NTSTATUS)0xC0000001)
 #define ACCESS_DENIED						((NTSTATUS)0xC0000022)
@@ -103,6 +120,10 @@ namespace Gdiplus
 
 #define IS_VALID_HANDLE(handle)				(handle && handle != INVALID_HANDLE_VALUE)
 #define IS_VALID_SMART_PTR(ptr)				(ptr && ptr.get())
+
+#ifndef GWL_WNDPROC
+	#define GWL_WNDPROC         (-4)
+#endif
 
 #define MakePtr(a, b)    ( ((ULONG_PTR)a ) + ((ULONG_PTR)b ) )
 #define LDRP_IMAGE_DLL                          0x00000004
@@ -134,6 +155,26 @@ namespace Gdiplus
 
 #define IsEqualStr(str1, str2)				(!strcmp(str1, str2))
 #define HasInVector(targetvector, element)	(std::find(targetvector.begin(), targetvector.end(), element) != targetvector.end())
+
+#define GetAbsolutePtr(pBase, dwOffset) (*(PVOID*)((PBYTE)pBase + (dwOffset)))
+#define Relative2Absolute(pBase, dwOffset, dwLength) (PVOID)((SIZE_T)pBase + (*(PLONG)((PBYTE)pBase + dwOffset)) + dwLength)
+
+#ifndef IS_SET
+#define IS_SET(flag, bit)                ((flag) & (bit))
+#endif
+
+#ifndef SET_BIT
+#define SET_BIT(var, bit)                ((var) |= (bit))
+#endif
+
+#ifndef REMOVE_BIT
+#define REMOVE_BIT(var, bit)             ((var) &= ~(bit))
+#endif
+
+#ifndef TOGGLE_BIT
+#define TOGGLE_BIT(var, bit)             ((var) = (var) ^ (bit))
+#endif
+
 
 static inline TEB* GetCurrentTeb()
 {

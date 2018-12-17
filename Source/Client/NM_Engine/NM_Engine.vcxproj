@@ -23,7 +23,7 @@
     <ProjectGuid>{1BF1AC3D-B40B-430A-94C9-91CE557B138B}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>NMEngine</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -73,25 +73,25 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\Bin\$(Configuration)\</OutDir>
-    <IncludePath>..\..\..\Extern\xorstr\include\;..\..\..\Extern\spdlog\include\;..\..\..\Extern\mysql\;..\..\..\Extern\lazy_importer\include\;..\..\..\Extern\Deviare-InProc\Include\;..\..\..\Extern\ClanLibEnv\;..\..\..\Extern\asyncplusplus\include\;..\..\..\Extern\amy\include\;..\..\..\Extern\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>..\..\Common\SharedTypes;..\..\..\Extern\xorstr\include\;..\..\..\Extern\spdlog\include\;..\..\..\Extern\mysql\;..\..\..\Extern\lazy_importer\include\;..\..\..\Extern\Deviare-InProc\Include\;..\..\..\Extern\ClanLibEnv\;..\..\..\Extern\asyncplusplus\include\;..\..\..\Extern\amy\include\;..\..\..\Extern\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>..\..\..\Extern\CompiledLibs\;..\..\..\Extern\;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\Bin\$(Configuration)\</OutDir>
-    <IncludePath>..\..\..\Extern\xorstr\include\;..\..\..\Extern\spdlog\include\;..\..\..\Extern\mysql\;..\..\..\Extern\lazy_importer\include\;..\..\..\Extern\Deviare-InProc\Include\;..\..\..\Extern\ClanLibEnv\;..\..\..\Extern\asyncplusplus\include\;..\..\..\Extern\amy\include\;..\..\..\Extern\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>..\..\Common\SharedTypes;..\..\..\Extern\xorstr\include\;..\..\..\Extern\spdlog\include\;..\..\..\Extern\mysql\;..\..\..\Extern\lazy_importer\include\;..\..\..\Extern\Deviare-InProc\Include\;..\..\..\Extern\ClanLibEnv\;..\..\..\Extern\asyncplusplus\include\;..\..\..\Extern\amy\include\;..\..\..\Extern\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>..\..\..\Extern\CompiledLibs\;..\..\..\Extern\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\..\Bin\$(Configuration)\</OutDir>
-    <IncludePath>..\..\..\Extern\xorstr\include\;..\..\..\Extern\spdlog\include\;..\..\..\Extern\mysql\;..\..\..\Extern\lazy_importer\include\;..\..\..\Extern\Deviare-InProc\Include\;..\..\..\Extern\ClanLibEnv\;..\..\..\Extern\asyncplusplus\include\;..\..\..\Extern\amy\include\;..\..\..\Extern\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>..\..\Common\SharedTypes;..\..\..\Extern\xorstr\include\;..\..\..\Extern\spdlog\include\;..\..\..\Extern\mysql\;..\..\..\Extern\lazy_importer\include\;..\..\..\Extern\Deviare-InProc\Include\;..\..\..\Extern\ClanLibEnv\;..\..\..\Extern\asyncplusplus\include\;..\..\..\Extern\amy\include\;..\..\..\Extern\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>..\..\..\Extern\CompiledLibs\;..\..\..\Extern\;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\..\Bin\$(Configuration)\</OutDir>
-    <IncludePath>..\..\..\Extern\xorstr\include\;..\..\..\Extern\spdlog\include\;..\..\..\Extern\mysql\;..\..\..\Extern\lazy_importer\include\;..\..\..\Extern\Deviare-InProc\Include\;..\..\..\Extern\ClanLibEnv\;..\..\..\Extern\asyncplusplus\include\;..\..\..\Extern\amy\include\;..\..\..\Extern\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>..\..\Common\SharedTypes;..\..\..\Extern\xorstr\include\;..\..\..\Extern\spdlog\include\;..\..\..\Extern\mysql\;..\..\..\Extern\lazy_importer\include\;..\..\..\Extern\Deviare-InProc\Include\;..\..\..\Extern\ClanLibEnv\;..\..\..\Extern\asyncplusplus\include\;..\..\..\Extern\amy\include\;..\..\..\Extern\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>..\..\..\Extern\CompiledLibs\;..\..\..\Extern\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -171,15 +171,204 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Extern\ReflectiveDLLRefresher\src\ApiSetMap.h" />
+    <ClInclude Include="..\..\..\Extern\ReflectiveDLLRefresher\src\ReflectiveLoader.h" />
+    <ClInclude Include="..\..\Common\CompilerSettings.h" />
+    <ClInclude Include="..\..\Common\SocketPackets.h" />
+    <ClInclude Include="Access.h" />
+    <ClInclude Include="AES256.h" />
+    <ClInclude Include="Analyser.h" />
+    <ClInclude Include="AntiBreakpoint.h" />
+    <ClInclude Include="AntiDebug.h" />
+    <ClInclude Include="AntiEmulation.h" />
+    <ClInclude Include="AntiMacro.h" />
+    <ClInclude Include="BasicLog.h" />
+    <ClInclude Include="BasicTypesUI.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="DbgHelpWrapper.h" />
     <ClInclude Include="Defines.h" />
+    <ClInclude Include="dirent.h" />
+    <ClInclude Include="DirFunctions.h" />
+    <ClInclude Include="DynamicWinapi.h" />
     <ClInclude Include="ErrorCodes.h" />
+    <ClInclude Include="ExceptionHandlers.h" />
+    <ClInclude Include="FileBase.h" />
+    <ClInclude Include="FileHelper.h" />
+    <ClInclude Include="FilterBridge.h" />
+    <ClInclude Include="FilterCommunication.h" />
+    <ClInclude Include="NetLib.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="Locks.h" />
+    <ClInclude Include="MacAddress.h" />
+    <ClInclude Include="NM_SDK_Manager.h" />
+    <ClInclude Include="HddData.h" />
+    <ClInclude Include="Hooks.h" />
+    <ClInclude Include="HW-Info.h" />
+    <ClInclude Include="ManualMap.h" />
+    <ClInclude Include="MappedFile.h" />
+    <ClInclude Include="MemoryHelper.h" />
+    <ClInclude Include="Metin2_SDK_Manager.h" />
+    <ClInclude Include="NetworkAdapter.h" />
+    <ClInclude Include="NM_SelfThreadManager.h" />
+    <ClInclude Include="NM_InitilizationManager.h" />
+    <ClInclude Include="IconHelper.h" />
+    <ClInclude Include="LDasm.h" />
+    <ClInclude Include="Md5.h" />
+    <ClInclude Include="MiniDump.h" />
+    <ClInclude Include="MutexHelper.h" />
+    <ClInclude Include="NamedPipe.h" />
+    <ClInclude Include="NetClient.h" />
+    <ClInclude Include="NetPeer.h" />
+    <ClInclude Include="NetServer.h" />
+    <ClInclude Include="NetService.h" />
+    <ClInclude Include="NktHookWrapper.h" />
     <ClInclude Include="NM_App.h" />
     <ClInclude Include="NM_Index.h" />
     <ClInclude Include="NM_Main.h" />
+    <ClInclude Include="NtApiWrapper.h" />
+    <ClInclude Include="PatternScan.h" />
+    <ClInclude Include="PatternTemplate.h" />
+    <ClInclude Include="PEHelper.h" />
+    <ClInclude Include="PipeManager.h" />
+    <ClInclude Include="Plugin.h" />
+    <ClInclude Include="ProcessFunctions.h" />
+    <ClInclude Include="ProgressBarUI.h" />
+    <ClInclude Include="Quarentine.h" />
+    <ClInclude Include="resource.hpp" />
+    <ClInclude Include="RSA.h" />
+    <ClInclude Include="SafeProcessHandle.h" />
+    <ClInclude Include="SafeThreadHandle.h" />
+    <ClInclude Include="ScannerInterface.h" />
+    <ClInclude Include="SelfProtection.h" />
+    <ClInclude Include="ServerSocketPeer.h" />
+    <ClInclude Include="ServiceCommunication.h" />
+    <ClInclude Include="ServiceHelper.h" />
+    <ClInclude Include="SocketClient.h" />
+    <ClInclude Include="SocketConnection.h" />
+    <ClInclude Include="SocketServer.h" />
+    <ClInclude Include="SocketUtils.h" />
+    <ClInclude Include="Spdlog_Wrapper.h" />
+    <ClInclude Include="StackTrace.h" />
+    <ClInclude Include="SyscallHelper.h" />
+    <ClInclude Include="SyscallIndexHelper.h" />
+    <ClInclude Include="TempFile.h" />
+    <ClInclude Include="Terminator.h" />
+    <ClInclude Include="ThreadEnumerator.h" />
+    <ClInclude Include="ThreadExitCallback.h" />
+    <ClInclude Include="ThreadFunctions.h" />
+    <ClInclude Include="ThreadHelper.h" />
+    <ClInclude Include="ThreadManagerHelper.h" />
+    <ClInclude Include="TidManager.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Watchdog.h" />
+    <ClInclude Include="WidgetUI.h" />
+    <ClInclude Include="WindowUI.h" />
+    <ClInclude Include="WindowCallback.h" />
+    <ClInclude Include="WindowEnumerator.h" />
+    <ClInclude Include="WinInetAPI.h" />
+    <ClInclude Include="WinVerHelper.h" />
     <ClInclude Include="WinAPI_Typedefs.h" />
     <ClInclude Include="Windows_Structs.h" />
+    <ClInclude Include="BasicCrypt.h" />
+    <ClInclude Include="WMI.h" />
+    <ClInclude Include="WorkQueue.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Analyser.cpp" />
+    <ClCompile Include="AntiAnalysis.cpp" />
+    <ClCompile Include="AntiBreakpoint.cpp" />
+    <ClCompile Include="AntiDebug.cpp" />
+    <ClCompile Include="AntiEmulation.cpp" />
+    <ClCompile Include="AntiHypervisor.cpp" />
+    <ClCompile Include="AntiMacro.cpp" />
+    <ClCompile Include="AntiSoftwareBreakpoint.cpp" />
+    <ClCompile Include="AntiVirtualize.cpp" />
+    <ClCompile Include="ApfnHooks.cpp" />
+    <ClCompile Include="ApiSetMap.cpp" />
+    <ClCompile Include="BasicTypesUI.cpp" />
+    <ClCompile Include="ClientSocketMain.cpp" />
+    <ClCompile Include="ClientSocketWorker.cpp" />
+    <ClCompile Include="CustomExceptionHandler.cpp" />
+    <ClCompile Include="DACL_Manager.cpp" />
+    <ClCompile Include="Data.cpp" />
+    <ClCompile Include="DbgHelpWrapper.cpp" />
+    <ClCompile Include="Decrease_Privileges.cpp" />
+    <ClCompile Include="DigitalSignatureCertificateScan.cpp" />
+    <ClCompile Include="DigitalSignatureScan.cpp" />
+    <ClCompile Include="DirFunctions.cpp" />
+    <ClCompile Include="DynamicWinapi.cpp" />
+    <ClCompile Include="DynamicWinapi_1.cpp" />
+    <ClCompile Include="DynamicWinapi_2.cpp" />
+    <ClCompile Include="DynamicWinapi_3.cpp" />
+    <ClCompile Include="DynamicWinapi_4.cpp" />
+    <ClCompile Include="Elevation.cpp" />
+    <ClCompile Include="ExceptionHandlers.cpp" />
+    <ClCompile Include="FileBase.cpp" />
+    <ClCompile Include="FileHelper.cpp" />
+    <ClCompile Include="FilterCommunication.cpp" />
+    <ClCompile Include="FolderScanner.cpp" />
+    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="LDasm.cpp" />
+    <ClCompile Include="NM_SDK_Manager.cpp" />
+    <ClCompile Include="HddData.cpp" />
+    <ClCompile Include="Hooks.cpp" />
+    <ClCompile Include="HW-Info.cpp" />
+    <ClCompile Include="ICheckMethods.cpp" />
+    <ClCompile Include="IDnsHistoryScanner.cpp" />
+    <ClCompile Include="IDriverScanner.cpp" />
+    <ClCompile Include="IEventLogScanner.cpp" />
+    <ClCompile Include="IFileScanner.cpp" />
+    <ClCompile Include="IFirmwareScanner.cpp" />
+    <ClCompile Include="IHandleScanner.cpp" />
+    <ClCompile Include="IHeapScanner.cpp" />
+    <ClCompile Include="IHiddenProcessScanner.cpp" />
+    <ClCompile Include="IJobScanner.cpp" />
+    <ClCompile Include="IManualMapScanner.cpp" />
+    <ClCompile Include="IMemoryWorkingSetScanner.cpp" />
+    <ClCompile Include="IModuleScanner.cpp" />
+    <ClCompile Include="INetworkScanner.cpp" />
+    <ClCompile Include="InlineHooks.cpp" />
+    <ClCompile Include="IObjectDirScanner.cpp" />
+    <ClCompile Include="IPoolScanner.cpp" />
+    <ClCompile Include="IProcessScanner.cpp" />
+    <ClCompile Include="IPssScanner.cpp" />
+    <ClCompile Include="IScannerWindowCallback.cpp" />
+    <ClCompile Include="ISectionChecksumScanner.cpp" />
+    <ClCompile Include="ISectionScanner.cpp" />
+    <ClCompile Include="IServiceScanner.cpp" />
+    <ClCompile Include="ITCPScanner.cpp" />
+    <ClCompile Include="ITestSignatureScanner.cpp" />
+    <ClCompile Include="IThreadContextScanner.cpp" />
+    <ClCompile Include="IThreadFrameScanner.cpp" />
+    <ClCompile Include="IThreadScanner.cpp" />
+    <ClCompile Include="IUnloadedModuleScanner.cpp" />
+    <ClCompile Include="IUSNJournalScanner.cpp" />
+    <ClCompile Include="IWindowHookScanner.cpp" />
+    <ClCompile Include="IWindowScanner.cpp" />
+    <ClCompile Include="IWorkingSetScanner.cpp" />
+    <ClCompile Include="IWow32reservedScanner.cpp" />
+    <ClCompile Include="MacAddress.cpp" />
+    <ClCompile Include="ManualMap.cpp" />
+    <ClCompile Include="MappedFile.cpp" />
+    <ClCompile Include="MemoryHelper.cpp" />
+    <ClCompile Include="Metin2_SDK_Manager.cpp" />
+    <ClCompile Include="MitigationPolicy_Manager.cpp" />
+    <ClCompile Include="NetworkAdapter.cpp" />
+    <ClCompile Include="NM_MainThread.cpp" />
+    <ClCompile Include="NM_SelfThreadManager.cpp" />
+    <ClCompile Include="NM_Shadow.cpp" />
+    <ClCompile Include="NM_ClientInitilization.cpp" />
+    <ClCompile Include="NM_HelperInitilization.cpp" />
+    <ClCompile Include="NM_InitilizationManager.cpp" />
+    <ClCompile Include="NM_LauncherInitilization.cpp" />
+    <ClCompile Include="NM_ServiceInitilization.cpp" />
+    <ClCompile Include="MiniDump.cpp" />
+    <ClCompile Include="NamedPipe.cpp" />
+    <ClCompile Include="NetClient.cpp" />
+    <ClCompile Include="NetPeer.cpp" />
+    <ClCompile Include="NetServer.cpp" />
+    <ClCompile Include="NetService.cpp" />
+    <ClCompile Include="NktHookWrapper.cpp" />
     <ClCompile Include="NM_App.cpp" />
     <ClCompile Include="NM_Main.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -188,6 +377,56 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="NM_TestFunctions.cpp" />
+    <ClCompile Include="NtApiWrapper.cpp" />
+    <ClCompile Include="ParentCheck.cpp" />
+    <ClCompile Include="PatternScan.cpp" />
+    <ClCompile Include="PatternTemplate.cpp" />
+    <ClCompile Include="PEHelper.cpp" />
+    <ClCompile Include="PipeManager.cpp" />
+    <ClCompile Include="Plugin.cpp" />
+    <ClCompile Include="ProcessFunctions.cpp" />
+    <ClCompile Include="ProgressBarUI.cpp" />
+    <ClCompile Include="Quarentine.cpp" />
+    <ClCompile Include="SafeProcessHandle.cpp" />
+    <ClCompile Include="SafeThreadHandle.cpp" />
+    <ClCompile Include="ScannerInterface.cpp" />
+    <ClCompile Include="ScreenProtection.cpp" />
+    <ClCompile Include="ScreenShot.cpp" />
+    <ClCompile Include="Access.cpp" />
+    <ClCompile Include="SelfHookAnalyser.cpp" />
+    <ClCompile Include="SelfHookCallback.cpp" />
+    <ClCompile Include="Self_AntiDump.cpp" />
+    <ClCompile Include="Self_DestroyModuleLinks.cpp" />
+    <ClCompile Include="Self_ProtectPE.cpp" />
+    <ClCompile Include="ServerSocketAuth.cpp" />
+    <ClCompile Include="ServerSocketMain.cpp" />
+    <ClCompile Include="ServerSocketPeer.cpp" />
+    <ClCompile Include="ServiceCommunication.cpp" />
+    <ClCompile Include="ServiceHelper.cpp" />
+    <ClCompile Include="SocketConnection.cpp" />
+    <ClCompile Include="Spdlog_Wrapper.cpp" />
+    <ClCompile Include="StackTrace.cpp" />
+    <ClCompile Include="StartAddress_Analyser.cpp" />
+    <ClCompile Include="SyscallHelper.cpp" />
+    <ClCompile Include="SyscallIndexHelper.cpp" />
+    <ClCompile Include="TempFile.cpp" />
+    <ClCompile Include="Terminator.cpp" />
+    <ClCompile Include="ThreadEnumerator.cpp" />
+    <ClCompile Include="ThreadExitCallback.cpp" />
+    <ClCompile Include="ThreadFunctions.cpp" />
+    <ClCompile Include="ThreadHelper.cpp" />
+    <ClCompile Include="ThreadManagerHelper.cpp" />
+    <ClCompile Include="Watchdog.cpp" />
+    <ClCompile Include="WidgetUI.cpp" />
+    <ClCompile Include="WindowUI.cpp" />
+    <ClCompile Include="WindowCallback.cpp" />
+    <ClCompile Include="WindowEnumerator.cpp" />
+    <ClCompile Include="WinInetAPI.cpp" />
+    <ClCompile Include="WMI.cpp" />
+    <ClCompile Include="wow64ext.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

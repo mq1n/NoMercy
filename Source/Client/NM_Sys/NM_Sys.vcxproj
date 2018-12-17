@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C712EACA-5343-4793-93B6-3DCA6FB9827C}</ProjectGuid>
+    <ProjectGuid>{2E7D7B77-3E06-4E46-841A-B0AB4E4DB534}</ProjectGuid>
     <TemplateGuid>{dd38f7fc-d7bd-488b-9242-7d8754cde80d}</TemplateGuid>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
@@ -35,6 +35,7 @@
     <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
     <ConfigurationType>Driver</ConfigurationType>
     <DriverType>WDM</DriverType>
+    <DriverTargetPlatform>Desktop</DriverTargetPlatform>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <TargetVersion>Windows10</TargetVersion>
@@ -42,6 +43,7 @@
     <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
     <ConfigurationType>Driver</ConfigurationType>
     <DriverType>WDM</DriverType>
+    <DriverTargetPlatform>Desktop</DriverTargetPlatform>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <TargetVersion>Windows10</TargetVersion>
@@ -49,6 +51,7 @@
     <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
     <ConfigurationType>Driver</ConfigurationType>
     <DriverType>WDM</DriverType>
+    <DriverTargetPlatform>Desktop</DriverTargetPlatform>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <TargetVersion>Windows10</TargetVersion>
@@ -56,6 +59,7 @@
     <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
     <ConfigurationType>Driver</ConfigurationType>
     <DriverType>WDM</DriverType>
+    <DriverTargetPlatform>Desktop</DriverTargetPlatform>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -67,72 +71,124 @@
   <PropertyGroup />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+    <EnableInf2cat>true</EnableInf2cat>
+    <IncludePath>../../Common/SharedTypes;$(CRT_IncludePath);$(KM_IncludePath);$(KIT_SHARED_IncludePath)</IncludePath>
+    <OutDir>..\..\Bin\$(Configuration)\</OutDir>
+    <Inf2CatUseLocalTime>true</Inf2CatUseLocalTime>
+    <TargetName>$(ProjectName)_$(PlatformTarget)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+    <EnableInf2cat>true</EnableInf2cat>
+    <IncludePath>../../Common/SharedTypes;$(CRT_IncludePath);$(KM_IncludePath);$(KIT_SHARED_IncludePath)</IncludePath>
+    <OutDir>..\..\Bin\$(Configuration)\</OutDir>
+    <Inf2CatUseLocalTime>true</Inf2CatUseLocalTime>
+    <TargetName>$(ProjectName)_$(PlatformTarget)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+    <EnableInf2cat>true</EnableInf2cat>
+    <IncludePath>../../Common/SharedTypes;$(CRT_IncludePath);$(KM_IncludePath);$(KIT_SHARED_IncludePath)</IncludePath>
     <OutDir>..\..\Bin\$(Configuration)\</OutDir>
     <Inf2CatUseLocalTime>true</Inf2CatUseLocalTime>
+    <TargetName>$(ProjectName)_$(PlatformTarget)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+    <EnableInf2cat>true</EnableInf2cat>
+    <IncludePath>../../Common/SharedTypes;$(CRT_IncludePath);$(KM_IncludePath);$(KIT_SHARED_IncludePath)</IncludePath>
     <OutDir>..\..\Bin\$(Configuration)\</OutDir>
     <Inf2CatUseLocalTime>true</Inf2CatUseLocalTime>
+    <TargetName>$(ProjectName)_$(PlatformTarget)</TargetName>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PreprocessorDefinitions>POOL_NX_OPTIN=1;_X86_=1;i386=1;STD_CALL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <TreatWarningAsError>false</TreatWarningAsError>
-    </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <IntrinsicFunctions>false</IntrinsicFunctions>
-    </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <StringPooling>false</StringPooling>
-    </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
+      <StringPooling>true</StringPooling>
       <BufferSecurityCheck>false</BufferSecurityCheck>
-      <SupportJustMyCode>false</SupportJustMyCode>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
     </ClCompile>
+    <PostBuildEvent>
+      <Command>makecab /f x32-debug.ddf</Command>
+    </PostBuildEvent>
+    <MASM>
+      <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
+    </MASM>
     <Link>
-      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
-    </Link>
-    <Link>
-      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+      <AdditionalDependencies>fltmgr.lib;%(AdditionalDependencies);$(KernelBufferOverflowLib);$(DDK_LIB_PATH)ntoskrnl.lib;$(DDK_LIB_PATH)hal.lib;$(DDK_LIB_PATH)wmilib.lib</AdditionalDependencies>
     </Link>
     <Link>
       <AdditionalOptions>/INTEGRITYCHECK %(AdditionalOptions)</AdditionalOptions>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <TreatWarningAsError>false</TreatWarningAsError>
-    </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <StringPooling>false</StringPooling>
-    </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-    </ClCompile>
-    <Link>
       <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
-    </Link>
-    <Link>
       <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PreprocessorDefinitions>POOL_NX_OPTIN=1;_X86_=1;i386=1;STD_CALL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>makecab /f x32-release.ddf</Command>
+    </PostBuildEvent>
+    <MASM>
+      <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
+    </MASM>
+    <Link>
+      <AdditionalDependencies>fltmgr.lib;%(AdditionalDependencies);$(KernelBufferOverflowLib);$(DDK_LIB_PATH)ntoskrnl.lib;$(DDK_LIB_PATH)hal.lib;$(DDK_LIB_PATH)wmilib.lib</AdditionalDependencies>
     </Link>
     <Link>
       <AdditionalOptions>/INTEGRITYCHECK %(AdditionalOptions)</AdditionalOptions>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PreprocessorDefinitions>POOL_NX_OPTIN=1;_WIN64;_AMD64_;AMD64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>makecab /f x64-debug.ddf</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>fltmgr.lib;%(AdditionalDependencies);$(KernelBufferOverflowLib);$(DDK_LIB_PATH)ntoskrnl.lib;$(DDK_LIB_PATH)hal.lib;$(DDK_LIB_PATH)wmilib.lib</AdditionalDependencies>
+    </Link>
+    <Link>
+      <AdditionalOptions>/INTEGRITYCHECK %(AdditionalOptions)</AdditionalOptions>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <PreprocessorDefinitions>POOL_NX_OPTIN=1;_WIN64;_AMD64_;AMD64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>makecab /f x64-release.ddf</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>fltmgr.lib;%(AdditionalDependencies);$(KernelBufferOverflowLib);$(DDK_LIB_PATH)ntoskrnl.lib;$(DDK_LIB_PATH)hal.lib;$(DDK_LIB_PATH)wmilib.lib</AdditionalDependencies>
+    </Link>
+    <Link>
+      <AdditionalOptions>/INTEGRITYCHECK %(AdditionalOptions)</AdditionalOptions>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -142,7 +198,47 @@
     <FilesToPackage Include="$(TargetPath)" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c" />
+    <ClInclude Include="..\..\Common\SharedTypes\CtlTypes.h" />
+    <ClInclude Include="..\..\Common\SharedTypes\FltTypes.h" />
+    <ClInclude Include="..\..\Common\SharedTypes\WdkTypes.h" />
+    <ClInclude Include="API\CommPort.h" />
+    <ClInclude Include="API\CppSupport.h" />
+    <ClInclude Include="API\CPU.h" />
+    <ClInclude Include="API\FilesAPI.h" />
+    <ClInclude Include="API\Importer.h" />
+    <ClInclude Include="API\IO.h" />
+    <ClInclude Include="API\KernelShells.h" />
+    <ClInclude Include="API\LinkedList.h" />
+    <ClInclude Include="API\Locks.h" />
+    <ClInclude Include="API\MemoryUtils.h" />
+    <ClInclude Include="API\ObCallbacks.h" />
+    <ClInclude Include="API\OSVersion.h" />
+    <ClInclude Include="API\ProcessesUtils.h" />
+    <ClInclude Include="API\PsCallbacks.h" />
+    <ClInclude Include="API\RAII.h" />
+    <ClInclude Include="API\StringsAPI.h" />
+    <ClInclude Include="Kernel-Bridge\DriverEvents.h" />
+    <ClInclude Include="Kernel-Bridge\FilterCallbacks.h" />
+    <ClInclude Include="Kernel-Bridge\IOCTLHandlers.h" />
+    <ClInclude Include="Kernel-Bridge\IOCTLs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="API\CommPort.cpp" />
+    <ClCompile Include="API\CppSupport.cpp" />
+    <ClCompile Include="API\CPU.cpp" />
+    <ClCompile Include="API\FilesAPI.cpp" />
+    <ClCompile Include="API\Importer.cpp" />
+    <ClCompile Include="API\IO.cpp" />
+    <ClCompile Include="API\KernelShells.cpp" />
+    <ClCompile Include="API\MemoryUtils.cpp" />
+    <ClCompile Include="API\ObCallbacks.cpp" />
+    <ClCompile Include="API\OSVersion.cpp" />
+    <ClCompile Include="API\ProcessesUtils.cpp" />
+    <ClCompile Include="API\PsCallbacks.cpp" />
+    <ClCompile Include="Kernel-Bridge\DriverEvents.cpp" />
+    <ClCompile Include="Kernel-Bridge\FilterCallbacks.cpp" />
+    <ClCompile Include="Kernel-Bridge\IOCTLHandlers.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

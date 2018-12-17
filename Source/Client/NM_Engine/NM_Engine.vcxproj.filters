@@ -21,6 +21,147 @@
     <Filter Include="Source Files\Anticheat Modules\API\Header">
       <UniqueIdentifier>{a8e4e904-6409-4240-bb6f-9d415d90235b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Utils">
+      <UniqueIdentifier>{3ae2576c-3e9e-4a3f-951c-3a853fe6b453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Utils\NktHookLib">
+      <UniqueIdentifier>{88c35efd-acb7-471a-a945-31b33d4bd20a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Utils\MiniDump">
+      <UniqueIdentifier>{92e2030a-af59-4d9e-ac3d-667e66485d6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Utils\Log">
+      <UniqueIdentifier>{d88f5738-4c2c-4880-9a62-ad7badf56465}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Utils\Hash">
+      <UniqueIdentifier>{2fbd5636-ce65-4ea9-a2dd-b1a1113b36ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Global Message Engine">
+      <UniqueIdentifier>{0549d64b-731c-4d4c-afba-727265c0e7bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{86e666f9-0be1-412b-ba23-7314124dd789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Initilization Manager">
+      <UniqueIdentifier>{5cf00a7c-f917-45c8-9864-e9a2152a9090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\_SDK">
+      <UniqueIdentifier>{1af4f0f1-386f-4af4-a9bb-3f39759c841d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\_SDK\Metin2">
+      <UniqueIdentifier>{1f68bdf7-779d-43a4-8a64-58050a5900d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Access">
+      <UniqueIdentifier>{0c142e30-02d5-481d-bf85-f29f825bba01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Self Protection">
+      <UniqueIdentifier>{8388d413-6d4c-41ef-8586-15b2443b926a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Analyser">
+      <UniqueIdentifier>{651786c9-b66d-48ea-bde7-939786bc52d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Antis">
+      <UniqueIdentifier>{97f5ac5f-5f42-4f62-b1bf-710f0a2ef22c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Hardware-Informations">
+      <UniqueIdentifier>{cc04fd0f-3a39-4f2c-9eea-01826641c8e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Quarentine">
+      <UniqueIdentifier>{27dec467-8aa5-4140-8587-c510615d8693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Hooks">
+      <UniqueIdentifier>{9c1f45e2-3711-494c-b966-881ab82e3b6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\ManualMap">
+      <UniqueIdentifier>{c4ebdda3-3069-4310-a785-1429560f1f65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\ManualMap\3rd">
+      <UniqueIdentifier>{83fcc798-6b25-47e9-9ddb-b9e8e599652a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers">
+      <UniqueIdentifier>{db8bc3ae-cbab-4d19-bbda-0553be861597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers\Window">
+      <UniqueIdentifier>{ea62bd8c-adc5-4067-8bb4-f3fc8b4b23b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers\Thread">
+      <UniqueIdentifier>{d08f4a6f-640f-463c-bdda-602b77d34b0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers\Syscall">
+      <UniqueIdentifier>{45ea450a-c6e6-49d4-8664-a2bb4d8b2b72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers\Driver">
+      <UniqueIdentifier>{0557e166-f247-4b6a-a17c-7bfd5c03e798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers\Process">
+      <UniqueIdentifier>{22dc5f34-47cf-472a-a14a-12b8fddbe146}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers\PE">
+      <UniqueIdentifier>{0d58854a-f4e6-44cb-92f5-59a76e474258}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers\Pattern">
+      <UniqueIdentifier>{58aaf1e5-0b57-4109-b2d2-7519b1f6c9c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers\File">
+      <UniqueIdentifier>{2949fb4a-b71e-4311-b88e-7687db28837a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Scan Interface">
+      <UniqueIdentifier>{8de8d162-2c31-4eb2-956a-57359a766015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Scan Interface\Callbacks">
+      <UniqueIdentifier>{d8484cdf-9939-4af6-9b3e-20d2b334fdec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Scan Interface\Common scans">
+      <UniqueIdentifier>{dfee6a93-8d52-4931-8897-731e0f75f4e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Scan Interface\Extended scans">
+      <UniqueIdentifier>{10cc1c6f-bb42-431d-aa66-f0e8462cb513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Scan Interface\Methods">
+      <UniqueIdentifier>{4bda1d2d-0abd-4921-92d7-d36db001b8e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Scan Interface\Other scans">
+      <UniqueIdentifier>{0aad0e0b-c509-4b6c-9391-575c3129ac3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Scan Interface\Routines">
+      <UniqueIdentifier>{53645415-f424-45bb-b59e-a43240cbd973}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Network Engine">
+      <UniqueIdentifier>{50762d46-c28b-42e7-be1c-138eab4eaf45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Network Engine\Socket">
+      <UniqueIdentifier>{11181de5-be0a-4c78-892c-e9f7e246944c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Network Engine\Internet">
+      <UniqueIdentifier>{0fb5b148-6720-4607-a08a-3dfdfc30628c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Network Engine\Socket\_Common">
+      <UniqueIdentifier>{81843bed-90cb-485a-824c-4f8272a5f923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Network Engine\Socket\Client">
+      <UniqueIdentifier>{9f3b8314-6086-497f-9518-550d2666395a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Network Engine\Socket\Server">
+      <UniqueIdentifier>{718eb3d3-7f64-4aaa-9341-56e0798dbd30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers\UI">
+      <UniqueIdentifier>{687f9c9e-936d-49fd-82cd-1bbc4e07914a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers\UI\Widgets">
+      <UniqueIdentifier>{77a7685c-b943-4620-b755-dfc40b8cd0cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Resource">
+      <UniqueIdentifier>{614a6094-45df-4e67-a13c-1cf7bfb933d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Utils\NetLib">
+      <UniqueIdentifier>{3afffdae-a358-4010-a09b-fbfef1672d3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers\Dbghelp">
+      <UniqueIdentifier>{21d79ef1-9769-4cf0-8cd4-b16b0805acbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Anticheat Modules\Helpers\Pipe">
+      <UniqueIdentifier>{6e6d344d-3b2c-4a2d-93a0-8b012a0779a1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NM_Index.h">
@@ -44,6 +185,288 @@
     <ClInclude Include="Windows_Structs.h">
       <Filter>Source Files\Anticheat Modules\API\Header</Filter>
     </ClInclude>
+    <ClInclude Include="WinVerHelper.h">
+      <Filter>Source Files\Anticheat Modules\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Source Files\Anticheat Modules\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="MutexHelper.h">
+      <Filter>Source Files\Anticheat Modules\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="LDasm.h">
+      <Filter>Source Files\Anticheat Modules\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="IconHelper.h">
+      <Filter>Source Files\Anticheat Modules\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="NamedPipe.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Pipe</Filter>
+    </ClInclude>
+    <ClInclude Include="NktHookWrapper.h">
+      <Filter>Source Files\Anticheat Modules\Utils\NktHookLib</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniDump.h">
+      <Filter>Source Files\Anticheat Modules\Utils\MiniDump</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicLog.h">
+      <Filter>Source Files\Anticheat Modules\Utils\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Spdlog_Wrapper.h">
+      <Filter>Source Files\Anticheat Modules\Utils\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicCrypt.h">
+      <Filter>Source Files\Anticheat Modules\Utils\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="RSA.h">
+      <Filter>Source Files\Anticheat Modules\Utils\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="Md5.h">
+      <Filter>Source Files\Anticheat Modules\Utils\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="AES256.h">
+      <Filter>Source Files\Anticheat Modules\Utils\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="NetClient.h">
+      <Filter>Source Files\Anticheat Modules\Utils\NetLib</Filter>
+    </ClInclude>
+    <ClInclude Include="NetPeer.h">
+      <Filter>Source Files\Anticheat Modules\Utils\NetLib</Filter>
+    </ClInclude>
+    <ClInclude Include="NetServer.h">
+      <Filter>Source Files\Anticheat Modules\Utils\NetLib</Filter>
+    </ClInclude>
+    <ClInclude Include="NetService.h">
+      <Filter>Source Files\Anticheat Modules\Utils\NetLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicWinapi.h">
+      <Filter>Source Files\Anticheat Modules\API\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="NtApiWrapper.h">
+      <Filter>Source Files\Anticheat Modules\API\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptionHandlers.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DirFunctions.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Data.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="WMI.h">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowCallback.h">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Watchdog.h">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="StackTrace.h">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Plugin.h">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="NM_SelfThreadManager.h">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Metin2_SDK_Manager.h">
+      <Filter>Source Files\Anticheat Modules\_SDK\Metin2</Filter>
+    </ClInclude>
+    <ClInclude Include="Access.h">
+      <Filter>Source Files\Anticheat Modules\Access</Filter>
+    </ClInclude>
+    <ClInclude Include="SelfProtection.h">
+      <Filter>Source Files\Anticheat Modules\Self Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkQueue.h">
+      <Filter>Source Files\Anticheat Modules\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Analyser.h">
+      <Filter>Source Files\Anticheat Modules\Analyser</Filter>
+    </ClInclude>
+    <ClInclude Include="AntiBreakpoint.h">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClInclude>
+    <ClInclude Include="AntiDebug.h">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClInclude>
+    <ClInclude Include="AntiEmulation.h">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClInclude>
+    <ClInclude Include="AntiMacro.h">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClInclude>
+    <ClInclude Include="HddData.h">
+      <Filter>Source Files\Anticheat Modules\Hardware-Informations</Filter>
+    </ClInclude>
+    <ClInclude Include="HW-Info.h">
+      <Filter>Source Files\Anticheat Modules\Hardware-Informations</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkAdapter.h">
+      <Filter>Source Files\Anticheat Modules\Hardware-Informations</Filter>
+    </ClInclude>
+    <ClInclude Include="Quarentine.h">
+      <Filter>Source Files\Anticheat Modules\Quarentine</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks.h">
+      <Filter>Source Files\Anticheat Modules\Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Extern\ReflectiveDLLRefresher\src\ApiSetMap.h">
+      <Filter>Source Files\Anticheat Modules\ManualMap\3rd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Extern\ReflectiveDLLRefresher\src\ReflectiveLoader.h">
+      <Filter>Source Files\Anticheat Modules\ManualMap\3rd</Filter>
+    </ClInclude>
+    <ClInclude Include="ManualMap.h">
+      <Filter>Source Files\Anticheat Modules\ManualMap</Filter>
+    </ClInclude>
+    <ClInclude Include="Terminator.h">
+      <Filter>Source Files\Anticheat Modules\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryHelper.h">
+      <Filter>Source Files\Anticheat Modules\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowEnumerator.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadManagerHelper.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadHelper.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadFunctions.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadExitCallback.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadEnumerator.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="SafeThreadHandle.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceCommunication.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceHelper.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="SyscallHelper.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Syscall</Filter>
+    </ClInclude>
+    <ClInclude Include="SyscallIndexHelper.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Syscall</Filter>
+    </ClInclude>
+    <ClInclude Include="SafeProcessHandle.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessFunctions.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="PEHelper.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\PE</Filter>
+    </ClInclude>
+    <ClInclude Include="PatternTemplate.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="PatternScan.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="FileBase.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\File</Filter>
+    </ClInclude>
+    <ClInclude Include="FileHelper.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\File</Filter>
+    </ClInclude>
+    <ClInclude Include="MappedFile.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\File</Filter>
+    </ClInclude>
+    <ClInclude Include="TempFile.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\File</Filter>
+    </ClInclude>
+    <ClInclude Include="ScannerInterface.h">
+      <Filter>Source Files\Anticheat Modules\Scan Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="WinInetAPI.h">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Internet</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketServer.h">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerSocketPeer.h">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\SocketPackets.h">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket\_Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketUtils.h">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket\_Common</Filter>
+    </ClInclude>
+    <ClInclude Include="TidManager.h">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket\_Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketClient.h">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="PipeManager.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Pipe</Filter>
+    </ClInclude>
+    <ClInclude Include="dirent.h">
+      <Filter>Source Files\Anticheat Modules\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="NM_SDK_Manager.h">
+      <Filter>Source Files\Anticheat Modules\_SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="NM_InitilizationManager.h">
+      <Filter>Common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgressBarUI.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\UI\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowUI.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicTypesUI.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="WidgetUI.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.hpp">
+      <Filter>Common\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\CompilerSettings.h">
+      <Filter>Common\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="MacAddress.h">
+      <Filter>Source Files\Anticheat Modules\Hardware-Informations</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketConnection.h">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="Locks.h">
+      <Filter>Source Files\Anticheat Modules\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="NetLib.h">
+      <Filter>Source Files\Anticheat Modules\Utils\NetLib</Filter>
+    </ClInclude>
+    <ClInclude Include="FilterCommunication.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="FilterBridge.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Driver</Filter>
+    </ClInclude>
+    <ClInclude Include="DbgHelpWrapper.h">
+      <Filter>Source Files\Anticheat Modules\Helpers\Dbghelp</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="NM_Main.cpp">
@@ -55,5 +478,436 @@
     <ClCompile Include="NM_App.cpp">
       <Filter>Common</Filter>
     </ClCompile>
+    <ClCompile Include="wow64ext.cpp">
+      <Filter>Source Files\Anticheat Modules\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="NamedPipe.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Pipe</Filter>
+    </ClCompile>
+    <ClCompile Include="NktHookWrapper.cpp">
+      <Filter>Source Files\Anticheat Modules\Utils\NktHookLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniDump.cpp">
+      <Filter>Source Files\Anticheat Modules\Utils\MiniDump</Filter>
+    </ClCompile>
+    <ClCompile Include="Spdlog_Wrapper.cpp">
+      <Filter>Source Files\Anticheat Modules\Utils\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="NetClient.cpp">
+      <Filter>Source Files\Anticheat Modules\Utils\NetLib</Filter>
+    </ClCompile>
+    <ClCompile Include="NetPeer.cpp">
+      <Filter>Source Files\Anticheat Modules\Utils\NetLib</Filter>
+    </ClCompile>
+    <ClCompile Include="NetServer.cpp">
+      <Filter>Source Files\Anticheat Modules\Utils\NetLib</Filter>
+    </ClCompile>
+    <ClCompile Include="NetService.cpp">
+      <Filter>Source Files\Anticheat Modules\Utils\NetLib</Filter>
+    </ClCompile>
+    <ClCompile Include="NtApiWrapper.cpp">
+      <Filter>Source Files\Anticheat Modules\API</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicWinapi.cpp">
+      <Filter>Source Files\Anticheat Modules\API</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicWinapi_1.cpp">
+      <Filter>Source Files\Anticheat Modules\API</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicWinapi_2.cpp">
+      <Filter>Source Files\Anticheat Modules\API</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicWinapi_3.cpp">
+      <Filter>Source Files\Anticheat Modules\API</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicWinapi_4.cpp">
+      <Filter>Source Files\Anticheat Modules\API</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptionHandlers.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="DirFunctions.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Data.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomExceptionHandler.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="NM_ClientInitilization.cpp">
+      <Filter>Common\Initilization Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NM_HelperInitilization.cpp">
+      <Filter>Common\Initilization Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NM_InitilizationManager.cpp">
+      <Filter>Common\Initilization Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NM_LauncherInitilization.cpp">
+      <Filter>Common\Initilization Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="NM_ServiceInitilization.cpp">
+      <Filter>Common\Initilization Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="WMI.cpp">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowCallback.cpp">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Watchdog.cpp">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="StackTrace.cpp">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenShot.cpp">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenProtection.cpp">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Plugin.cpp">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="NM_Shadow.cpp">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="NM_SelfThreadManager.cpp">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="NM_MainThread.cpp">
+      <Filter>Source Files\Anticheat Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Metin2_SDK_Manager.cpp">
+      <Filter>Source Files\Anticheat Modules\_SDK\Metin2</Filter>
+    </ClCompile>
+    <ClCompile Include="Access.cpp">
+      <Filter>Source Files\Anticheat Modules\Access</Filter>
+    </ClCompile>
+    <ClCompile Include="DACL_Manager.cpp">
+      <Filter>Source Files\Anticheat Modules\Access</Filter>
+    </ClCompile>
+    <ClCompile Include="Decrease_Privileges.cpp">
+      <Filter>Source Files\Anticheat Modules\Access</Filter>
+    </ClCompile>
+    <ClCompile Include="Elevation.cpp">
+      <Filter>Source Files\Anticheat Modules\Access</Filter>
+    </ClCompile>
+    <ClCompile Include="MitigationPolicy_Manager.cpp">
+      <Filter>Source Files\Anticheat Modules\Access</Filter>
+    </ClCompile>
+    <ClCompile Include="Self_AntiDump.cpp">
+      <Filter>Source Files\Anticheat Modules\Self Protection</Filter>
+    </ClCompile>
+    <ClCompile Include="Self_DestroyModuleLinks.cpp">
+      <Filter>Source Files\Anticheat Modules\Self Protection</Filter>
+    </ClCompile>
+    <ClCompile Include="Analyser.cpp">
+      <Filter>Source Files\Anticheat Modules\Analyser</Filter>
+    </ClCompile>
+    <ClCompile Include="SelfHookCallback.cpp">
+      <Filter>Source Files\Anticheat Modules\Analyser</Filter>
+    </ClCompile>
+    <ClCompile Include="StartAddress_Analyser.cpp">
+      <Filter>Source Files\Anticheat Modules\Analyser</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiAnalysis.cpp">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiBreakpoint.cpp">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiDebug.cpp">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiEmulation.cpp">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiHypervisor.cpp">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiMacro.cpp">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiSoftwareBreakpoint.cpp">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiVirtualize.cpp">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClCompile>
+    <ClCompile Include="ParentCheck.cpp">
+      <Filter>Source Files\Anticheat Modules\Antis</Filter>
+    </ClCompile>
+    <ClCompile Include="HddData.cpp">
+      <Filter>Source Files\Anticheat Modules\Hardware-Informations</Filter>
+    </ClCompile>
+    <ClCompile Include="HW-Info.cpp">
+      <Filter>Source Files\Anticheat Modules\Hardware-Informations</Filter>
+    </ClCompile>
+    <ClCompile Include="MacAddress.cpp">
+      <Filter>Source Files\Anticheat Modules\Hardware-Informations</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkAdapter.cpp">
+      <Filter>Source Files\Anticheat Modules\Hardware-Informations</Filter>
+    </ClCompile>
+    <ClCompile Include="Quarentine.cpp">
+      <Filter>Source Files\Anticheat Modules\Quarentine</Filter>
+    </ClCompile>
+    <ClCompile Include="SelfHookAnalyser.cpp">
+      <Filter>Source Files\Anticheat Modules\Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="InlineHooks.cpp">
+      <Filter>Source Files\Anticheat Modules\Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooks.cpp">
+      <Filter>Source Files\Anticheat Modules\Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="ApfnHooks.cpp">
+      <Filter>Source Files\Anticheat Modules\Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="ApiSetMap.cpp">
+      <Filter>Source Files\Anticheat Modules\ManualMap\3rd</Filter>
+    </ClCompile>
+    <ClCompile Include="ManualMap.cpp">
+      <Filter>Source Files\Anticheat Modules\ManualMap</Filter>
+    </ClCompile>
+    <ClCompile Include="Terminator.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryHelper.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowEnumerator.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadManagerHelper.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadHelper.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadFunctions.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadExitCallback.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadEnumerator.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="SafeThreadHandle.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceCommunication.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceHelper.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="SyscallHelper.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Syscall</Filter>
+    </ClCompile>
+    <ClCompile Include="SyscallIndexHelper.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Syscall</Filter>
+    </ClCompile>
+    <ClCompile Include="SafeProcessHandle.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessFunctions.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="PEHelper.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\PE</Filter>
+    </ClCompile>
+    <ClCompile Include="PatternTemplate.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="PatternScan.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Pattern</Filter>
+    </ClCompile>
+    <ClCompile Include="FileBase.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\File</Filter>
+    </ClCompile>
+    <ClCompile Include="FileHelper.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\File</Filter>
+    </ClCompile>
+    <ClCompile Include="MappedFile.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\File</Filter>
+    </ClCompile>
+    <ClCompile Include="TempFile.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\File</Filter>
+    </ClCompile>
+    <ClCompile Include="ScannerInterface.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="ISectionChecksumScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Routines</Filter>
+    </ClCompile>
+    <ClCompile Include="IMemoryWorkingSetScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Routines</Filter>
+    </ClCompile>
+    <ClCompile Include="IWow32reservedScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IWorkingSetScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IUSNJournalScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IUnloadedModuleScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IThreadFrameScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IThreadContextScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="ITestSignatureScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="ITCPScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="INetworkScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IManualMapScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IHiddenProcessScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IEventLogScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IDnsHistoryScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Other scans</Filter>
+    </ClCompile>
+    <ClCompile Include="ICheckMethods.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="DigitalSignatureScan.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="DigitalSignatureCertificateScan.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Methods</Filter>
+    </ClCompile>
+    <ClCompile Include="IScannerWindowCallback.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Callbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="IWindowHookScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Extended scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IPssScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Extended scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IPoolScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Extended scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IJobScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Extended scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IFirmwareScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Extended scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IWindowScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Common scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IThreadScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Common scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IServiceScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Common scans</Filter>
+    </ClCompile>
+    <ClCompile Include="ISectionScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Common scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IProcessScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Common scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IObjectDirScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Common scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IModuleScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Common scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IHeapScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Common scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IHandleScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Common scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IFileScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Common scans</Filter>
+    </ClCompile>
+    <ClCompile Include="IDriverScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Common scans</Filter>
+    </ClCompile>
+    <ClCompile Include="FolderScanner.cpp">
+      <Filter>Source Files\Anticheat Modules\Scan Interface\Common scans</Filter>
+    </ClCompile>
+    <ClCompile Include="WinInetAPI.cpp">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Internet</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerSocketPeer.cpp">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerSocketMain.cpp">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerSocketAuth.cpp">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientSocketWorker.cpp">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientSocketMain.cpp">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="PipeManager.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Pipe</Filter>
+    </ClCompile>
+    <ClCompile Include="NM_SDK_Manager.cpp">
+      <Filter>Source Files\Anticheat Modules\_SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="LDasm.cpp">
+      <Filter>Source Files\Anticheat Modules\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Self_ProtectPE.cpp">
+      <Filter>Source Files\Anticheat Modules\Self Protection</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressBarUI.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\UI\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="WidgetUI.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowUI.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicTypesUI.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketConnection.cpp">
+      <Filter>Source Files\Anticheat Modules\Network Engine\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="FilterCommunication.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Driver</Filter>
+    </ClCompile>
+    <ClCompile Include="DbgHelpWrapper.cpp">
+      <Filter>Source Files\Anticheat Modules\Helpers\Dbghelp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>Common\Resource</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

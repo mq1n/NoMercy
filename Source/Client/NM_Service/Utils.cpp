@@ -3,31 +3,32 @@
 #include "stdafx.h"
 #include "Utils.h"
 
+#include <xorstr.hpp>
 #include <lazy_importer.hpp>
 
-#define SERVICE_NAME "NoMercySvc"
+#define SERVICE_NAME xorstr("NoMercySvc").crypt_get()
 
 inline void WriteEventLogEntry(const std::string & szMessage, WORD wType)
 {
 	HANDLE EventSource = NULL;
 	LPCSTR Strings[2] = { NULL, NULL };
 
-	EventSource = RegisterEventSourceA(NULL, SERVICE_NAME);
+	EventSource = LI_FIND(RegisterEventSourceA)(NULL, SERVICE_NAME);
 	if (EventSource)
 	{
 		Strings[0] = SERVICE_NAME;
 		Strings[1] = szMessage.c_str();
 
-		ReportEventA(EventSource, wType, 0, 0, NULL, 2, 0, Strings, NULL);
+		LI_FIND(ReportEventA)(EventSource, wType, 0, 0, NULL, 2, 0, Strings, NULL);
 
-		DeregisterEventSource(EventSource);
+		LI_FIND(DeregisterEventSource)(EventSource);
 	}
 }
 
 void NNoMercyUtils::WriteErrorLogEntry(const std::string & szFunction, uint32_t dwError)
 {
 	char szMessage[1024];
-	sprintf(szMessage, "NoMercy | %s Failed: 0x%08lx", szFunction.c_str(), dwError);
+	sprintf(szMessage, xorstr("NoMercy | %s Failed: 0x%08lx").crypt_get(), szFunction.c_str(), dwError);
 
 	WriteEventLogEntry(szMessage, EVENTLOG_ERROR_TYPE);
 }
@@ -53,7 +54,7 @@ void NNoMercyUtils::FileLogf(const std::string & szFileName, const char* c_szFor
 
 void NNoMercyUtils::DebugLog(const std::string & szLogData)
 {
-	OutputDebugStringA(szLogData.c_str());
+	LI_FIND(OutputDebugStringA)(szLogData.c_str());
 }
 
 void NNoMercyUtils::DebugLogf(const char* c_szFormat, ...)
@@ -75,10 +76,10 @@ bool NNoMercyUtils::IsFileExist(const std::string & szFileName)
 
 std::string NNoMercyUtils::ExePath()
 {
-	char buffer[MAX_PATH];
-	GetModuleFileNameA(NULL, buffer, MAX_PATH);
+	char pBuffer[MAX_PATH] = { 0 };
+	LI_FIND(GetModuleFileNameA)(NULL, pBuffer, MAX_PATH);
 
-	auto szBuffer = std::string(buffer);
+	auto szBuffer = std::string(pBuffer);
 	auto pos = szBuffer.find_last_of("\\/");
 	return szBuffer.substr(0, pos);
 }

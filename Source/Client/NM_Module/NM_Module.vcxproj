@@ -23,7 +23,7 @@
     <ProjectGuid>{5131A1A6-B0C9-432C-AA4F-662A9ED158B9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>NMModule</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -74,7 +74,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\Bin\$(Configuration)\</OutDir>
     <IncludePath>..\..\..\Extern\xorstr\include\;..\..\..\Extern\spdlog\include\;..\..\..\Extern\mysql\;..\..\..\Extern\lazy_importer\include\;..\..\..\Extern\Deviare-InProc\Include\;..\..\..\Extern\ClanLibEnv\;..\..\..\Extern\asyncplusplus\include\;..\..\..\Extern\amy\include\;..\..\..\Extern\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <LibraryPath>..\..\..\Extern\CompiledLibs\;..\..\..\Extern\;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+    <LibraryPath>..\..\..\Extern\CompiledLibs\boost\lib32-msvc-14.1;..\..\..\Extern\CompiledLibs\;..\..\..\Extern\;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
     <GenerateManifest>false</GenerateManifest>
     <TargetName>NoMercy</TargetName>
   </PropertyGroup>
@@ -82,7 +82,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\Bin\$(Configuration)\</OutDir>
     <IncludePath>..\..\..\Extern\xorstr\include\;..\..\..\Extern\spdlog\include\;..\..\..\Extern\mysql\;..\..\..\Extern\lazy_importer\include\;..\..\..\Extern\Deviare-InProc\Include\;..\..\..\Extern\ClanLibEnv\;..\..\..\Extern\asyncplusplus\include\;..\..\..\Extern\amy\include\;..\..\..\Extern\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <LibraryPath>..\..\..\Extern\CompiledLibs\;..\..\..\Extern\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <LibraryPath>..\..\..\Extern\CompiledLibs\boost\lib64-msvc-14.1;..\..\..\Extern\CompiledLibs\;..\..\..\Extern\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
     <GenerateManifest>false</GenerateManifest>
     <TargetName>NoMercy</TargetName>
   </PropertyGroup>
@@ -90,7 +90,7 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\..\Bin\$(Configuration)\</OutDir>
     <IncludePath>..\..\..\Extern\xorstr\include\;..\..\..\Extern\spdlog\include\;..\..\..\Extern\mysql\;..\..\..\Extern\lazy_importer\include\;..\..\..\Extern\Deviare-InProc\Include\;..\..\..\Extern\ClanLibEnv\;..\..\..\Extern\asyncplusplus\include\;..\..\..\Extern\amy\include\;..\..\..\Extern\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <LibraryPath>..\..\..\Extern\CompiledLibs\;..\..\..\Extern\;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+    <LibraryPath>..\..\..\Extern\CompiledLibs\boost\lib32-msvc-14.1;..\..\..\Extern\CompiledLibs\;..\..\..\Extern\;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
     <GenerateManifest>false</GenerateManifest>
     <TargetName>NoMercy</TargetName>
   </PropertyGroup>
@@ -98,7 +98,7 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\..\Bin\$(Configuration)\</OutDir>
     <IncludePath>..\..\..\Extern\xorstr\include\;..\..\..\Extern\spdlog\include\;..\..\..\Extern\mysql\;..\..\..\Extern\lazy_importer\include\;..\..\..\Extern\Deviare-InProc\Include\;..\..\..\Extern\ClanLibEnv\;..\..\..\Extern\asyncplusplus\include\;..\..\..\Extern\amy\include\;..\..\..\Extern\;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <LibraryPath>..\..\..\Extern\CompiledLibs\;..\..\..\Extern\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+    <LibraryPath>..\..\..\Extern\CompiledLibs\boost\lib64-msvc-14.1;..\..\..\Extern\CompiledLibs\;..\..\..\Extern\;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
     <GenerateManifest>false</GenerateManifest>
     <TargetName>NoMercy</TargetName>
   </PropertyGroup>
@@ -181,10 +181,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="NM_Module.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="NM_Module.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
