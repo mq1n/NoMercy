@@ -22,7 +22,7 @@
 #include <cstddef>
 #include <utility>
 
-#define xorstr(str)                                             \
+#define xorstr(str)                                              \
     ::jm::make_xorstr(                                          \
         []() { return str; },                                   \
         std::make_index_sequence<sizeof(str) / sizeof(*str)>{}, \
@@ -30,9 +30,11 @@
 #define xorstr_(str) xorstr(str).crypt_get()
 
 #ifdef _MSC_VER
-#define XORSTR_FORCEINLINE __forceinline
+    #define XORSTR_FORCEINLINE __forceinline
+    #define XORSTR_NOINLINE __declspec(noinline)
 #else
-#define XORSTR_FORCEINLINE __attribute__((always_inline)) inline
+    #define XORSTR_FORCEINLINE __attribute__((always_inline)) inline
+    #define XORSTR_NOINLINE __attribute__((noinline))
 #endif
 
 namespace jm {
@@ -175,6 +177,11 @@ namespace jm {
             (detail::xor128(_storage + Idxs * 2, keys + Idxs * 2), ...);
         }
 
+       
+        XORSTR_NOINLINE static void _anti_emul(volatile std::uint64_t* ptr) noexcept {
+            (void)*ptr; 
+        }
+
     public:
         using value_type    = typename T::value_type;
         using size_type     = std::size_t;
@@ -193,6 +200,7 @@ namespace jm {
 
         XORSTR_FORCEINLINE void crypt() noexcept
         {
+            _anti_emul(_storage); // https://github.com/lstaroth/AntiXorstr/blob/9cfbf04816b1fce8d10b844e6ff7dc907bb5fcad/antixorstr/antixorstr_core.py#L70 - Stops emulation xd
 #if defined(__clang__)
             alignas(T::buffer_align)
                 std::uint64_t arr[sizeof...(Keys)]{ detail::load_from_reg(Keys::key)... };
